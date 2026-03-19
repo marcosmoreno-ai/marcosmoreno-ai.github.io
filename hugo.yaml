@@ -67,8 +67,8 @@ languages:
       # Experience
       experience:
         items:
-          - company: "Empresa Actual"
-            companyUrl: "https://example.com"
+          - company: "VRAIA"
+            companyUrl: "https://vraia.com"
             jobs:
               - name: "AI Tech Lead"
                 date: "2023 - Presente"
@@ -278,7 +278,7 @@ params:
   experience:
     enable: true
     items:
-      - company: "Current Company"
+      - company: "VRAIA"
         companyUrl: "https://vraia.com/"
         jobs:
           - name: "AI Tech Lead"
