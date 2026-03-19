@@ -176,9 +176,9 @@ markup:
       unsafe: true
 
 params:
-  title: "Marcos Moreno"
+  title: "Marcos M.M."
   description: "AI Tech Lead — Computer Vision & Deep Learning"
-  favicon: "/fav.png"
+  favicon: "/images/fav.png"
 
   useBootstrapCDN: false
   mathjax: false
