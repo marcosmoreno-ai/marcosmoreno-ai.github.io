@@ -2,18 +2,16 @@
 {{- $hero := .Site.Language.Params.hero | default .Site.Params.hero -}}
 <section id="hero" class="py-5 align-middle">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
-        <div class="row align-items-center">
-            <div class="col-sm-12 col-md-3 col-lg-2 mb-4 mb-md-0 {{ if .Site.Params.animate }}animate{{ end }}">
-                <div class="text-center text-md-start">
-                    <div class="hero-photo-wrapper">
-                        <img src="{{ .Site.Params.hero.image }}"
-                            class="img-fluid hero-photo"
-                            alt="{{ .Site.Params.title }} profile image"
-                        >
-                    </div>
+        <div class="row align-items-center flex-nowrap">
+            <div class="col-4 image {{ if .Site.Params.animate }}animate{{ end }} text-center">
+                <div class="hero-photo-wrapper">
+                    <img src="{{ .Site.Params.hero.image }}"
+                        class="img-fluid hero-photo mx-auto"
+                        alt="{{ .Site.Params.title }} profile image"
+                    >
                 </div>
             </div>
-            <div class="col-sm-12 col-md-9 col-lg-10 content {{ if .Site.Params.animate }}animate{{ end }}" id="primary-font">
+            <div class="col-8 content {{ if .Site.Params.animate }}animate{{ end }}" id="primary-font">
                 <span class="subtitle">
                     {{ $hero.intro }}
                 </span>
