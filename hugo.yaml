@@ -232,9 +232,9 @@ params:
   hero:
     enable: true
     intro: "Hi, I'm"
-    title: "Marcos Moreno Martínez"
-    subtitle: "AI Tech Lead"
-    content: "Robotics engineer with 6 years of experience in Computer Vision and AI. I train models, build datasets, and lead multidisciplinary AI teams."
+    title: "AI Engineering Leader"
+    subtitle: "I build and scale AI teams that actually ship. 6 years turning complex computer vision and AI systems into functioning, communicating, delivering teams."
+    content: ""
     image: /images/ai-cv-image.jpg
     bottomImage:
       enable: true
@@ -256,9 +256,13 @@ params:
     enable: true
     title: "About Me"
     content: |-
-      I'm Marcos Moreno Martínez, an AI Tech Lead based in Spain. I hold a degree in Robotics Engineering from the University of Alicante, and I've spent the last 6 years specializing in computer vision, deep learning model training, and AI team management.
+      I'm Marcos, an AI Engineering Leader based in Spain.
 
-      I joined my current company right before a major production deployment of a system with over 11 CNNs. Since then, I've grown from building data pipelines and fine-tuning models with TensorFlow, to leading a multidisciplinary team covering computer vision projects, AI agents, and RPA. I'm comfortable operating at the boundary between hands-on technical work and people management — and I hold a C1 level in English.
+      Over the last 6 years at VRAIA I've grown from building dataset pipelines to leading a Computer Vision team with 30+ CNNs running in production. More recently I've taken on a supervisory role on an AI Agents and RPA project to help it ship on time.
+
+      What I've learned is that the hardest part of AI in production isn't the models — it's the people, the communication, and the process. I've spent years at that boundary: technically solid enough to earn my team's trust, and organizationally aware enough to keep things moving when they start to break down.
+
+      C1 English. I lead with clarity. I grow people around me.
     skills:
       enable: true
       title: "Technologies I work with:"
@@ -284,36 +288,38 @@ params:
           - name: "AI Tech Lead"
             date: "2023 - Present"
             info:
-              content: Leading computer vision, agents and RPA teams
+              content: Leading two parallel AI teams across computer vision and AI agents
             content: |
-              Leading multiple parallel AI teams: a Computer Vision team (labelers, a PhD in mathematics and a junior AI profile) and an Agents & RPA team (senior fullstack, backend, frontend and an AI agent specialist).
+              Leading two parallel AI teams: a Computer Vision team (2 labelers, a PhD mathematician, a junior ML engineer) and an AI Agents & RPA team (senior fullstack, backend, frontend and an agent specialist) — 8 people across very different profiles and disciplines.
 
-              - Team management and mentoring of both junior and senior profiles.
-              - Reporting to CTO and Project Manager, communicating progress and blockers.
-              - Technical oversight of production computer vision systems with 11+ CNNs.
-              - Technical direction of AI agent and RPA automation projects.
+              - Technical oversight of a production computer vision system with 30+ CNNs.
+              - Team management and mentoring across junior and senior profiles.
+              - Bridge between engineers and upper management — reporting, protecting the team, unblocking delivery.
+              - Introduced tooling standards (uv, ruff, MLflow) that improved consistency and reduced friction across both teams.
+              - Resolved critical communication breakdowns between the AI and IT teams — misalignments that had been blocking production deployments for months.
 
-          - name: "Computer Vision Engineer"
+          - name: "ML Engineer"
             date: "2021 - 2023"
             info:
-              content: Sole owner of the computer vision team
+              content: Full ownership of computer vision projects
             content: |
-              After my colleague left for a PhD, I took full ownership of the computer vision team. I recruited and trained new profiles from scratch.
+              Took full ownership of computer vision projects after the team restructured. Managed two separate workstreams — segmentation and classification networks — simultaneously.
 
-              - Onboarding and training of new team members (labelers and junior AI).
-              - Dataset management: labeling, structuring, preprocessing pipelines.
-              - Experimentation with custom loss functions and training strategies.
+              - Implemented MLflow for model tracking and improved pre/post-processing pipelines.
+              - Owned the full ML lifecycle: training, experimentation, ONNX export and coordination with IT for TensorRT production deployment.
+              - Refactored a legacy classification codebase inherited in poor condition.
+              - Onboarded and mentored a new team member with no prior professional programming experience.
 
-          - name: "Junior AI Engineer"
+          - name: "Junior ML Engineer"
             date: "2019 - 2021"
             info:
               content: First steps in production AI
             content: |
-              Joined the company just before a major production deployment of a system with 11+ CNNs. First months were fully dedicated to the dataset: tool research, database setup, preprocessing pipelines and labeling.
+              Joined during a critical production deployment. Before getting repo access, proactively built Python tooling to automate repetitive labeling tasks and a prototype app to manage dataset splits — later used as the basis for a more robust internal tool.
 
-              - Built and maintained the dataset infrastructure from scratch.
-              - Model fine-tuning and experimentation with TensorFlow.
-              - First fully autonomous models after 2 years at the company.
+              - Self-initiated automation tools that improved the team's labeling workflow.
+              - Once given repo access, moved quickly into model fine-tuning and experimentation with TensorFlow.
+              - First experience with production model deployment pipelines (.pb format, coordinating with IT integration).
 
   # Education
   education:
