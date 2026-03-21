@@ -61,7 +61,7 @@ languages:
         content: |-
           Soy Marcos, AI Engineering Leader con sede en España.
 
-          En los últimos 6 años en VRAIA he pasado de construir pipelines de datos a liderar un equipo de Machine Learning con más de 30 modelos de deep learning (CNNs y Vision Transformers) en producción. Más recientemente asumí la supervisión de un proyecto de AI Agents y RPA para ayudar a que saliera adelante.
+          En los últimos 6 años en VRAIA he pasado de construir pipelines de datos a liderar equipos de Machine Learning e IA con más de 30 modelos de deep learning (CNNs y Vision Transformers) en producción. Más recientemente asumí la supervisión de un proyecto de AI Agents y RPA para ayudar a que saliera adelante.
 
           Lo que he aprendido es que lo más difícil de la IA en producción no son los modelos — son las personas, la comunicación y los procesos. Llevo años moviéndome en esa frontera: con la solidez técnica para ganarme la confianza de mi equipo, y la visión organizativa para mantener las cosas en marcha cuando empiezan a atascarse.
 
@@ -72,17 +72,28 @@ languages:
           items:
             - "Python"
             - "TensorFlow"
+            - "Keras"
             - "PyTorch"
-            - "YOLO"
             - "OpenCV"
+            - "NumPy"
+            - "pandas"
+            - "scikit-learn"
+            - "ONNX"
+            - "ONNXRuntime"
             - "MLflow"
-            - "LangChain"
-            - "LangGraph"
-            - "Docker"
-            - "Linux"
-            - "Git"
             - "uv"
             - "ruff"
+            - "Git"
+            - "Gitea"
+            - "WSL"
+            - "Ubuntu"
+            - "LangChain"
+            - "LangGraph"
+            - "CUDA"
+            - "cuDNN"
+            - "PostgreSQL"
+            - "Ceph"
+            - "Docker"
 
       # Experience
       experience:
@@ -179,7 +190,7 @@ languages:
         items:
           - title: Asistente Visual para Peatones Ciegos
             content: Sistema de IA de extremo a extremo para ayudar a personas con discapacidad visual a cruzar pasos de peatones de forma segura, bajo cualquier condición de iluminación. Construí un dataset personalizado de 1.010 imágenes, fine-tuné YOLOv3 alcanzando un 92% de recall y 75% IoU. Servido mediante API Flask, consumido por una app Android con retroalimentación háptica y de audio. Validado en pruebas reales en calle con un 100% de acierto.
-            image: /images/projects/profile.png
+            image: /images/projects/mem-port.jpg
             badges:
               - "YOLOv3"
               - "Flask"
@@ -187,8 +198,8 @@ languages:
               - "Python"
               - "Darknet"
             links:
-              - icon: fab fa-github
-                url: https://github.com/marcosmoreno-ai
+              - icon: fas fa-file-pdf
+                url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
 
       # Contact
       contact:
@@ -310,17 +321,28 @@ params:
       items:
         - "Python"
         - "TensorFlow"
+        - "Keras"
         - "PyTorch"
-        - "YOLO"
         - "OpenCV"
+        - "NumPy"
+        - "pandas"
+        - "scikit-learn"
+        - "ONNX"
+        - "ONNXRuntime"
         - "MLflow"
-        - "LangChain"
-        - "LangGraph"
-        - "Docker"
-        - "Linux"
-        - "Git"
         - "uv"
         - "ruff"
+        - "Git"
+        - "Gitea"
+        - "WSL"
+        - "Ubuntu"
+        - "LangChain"
+        - "LangGraph"
+        - "CUDA"
+        - "cuDNN"
+        - "PostgreSQL"
+        - "Ceph"
+        - "Docker"
 
   # Experience
   experience:
@@ -417,7 +439,7 @@ params:
     items:
       - title: Visual Assistant for Blind Pedestrians
         content: End-to-end AI system to help visually impaired people cross pedestrian crossings safely, under any lighting condition. Built a custom dataset of 1,010 images, fine-tuned YOLOv3 reaching 92% recall and 75% IoU. Served via Flask API, consumed by an Android app with haptic and audio feedback. Validated in real-world tests with 100% accuracy.
-        image: /images/projects/profile.png
+        image: /images/projects/mem-port.jpg
         badges:
           - "YOLOv3"
           - "Flask"
@@ -425,8 +447,8 @@ params:
           - "Python"
           - "Darknet"
         links:
-          - icon: fab fa-github
-            url: https://github.com/marcosmoreno-ai
+          - icon: fas fa-file-pdf
+            url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
 
   # Contact
   contact:
