@@ -177,10 +177,10 @@ languages:
         items:
           - title: 6 Años Creciendo en IA en Producción
             content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar 8 personas en dos equipos de IA en paralelo.
-            image: /images/achievement.jpg
+            image: /images/achivements/tree.png
           - title: C1 de Inglés
-            content: Alcancé el nivel C1 tras la graduación mediante estudio autodidacta y preparación formal del examen. Mantenido activamente mediante práctica de conversación semanal.
-            image: /images/achievement.jpg
+            content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
+            image: /images/achivements/cambridge.jpg
           - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
             content: Especialización de 5 cursos que cubre CNNs, RNNs, LSTMs, Transformers, ajuste de hiperparámetros y optimización.
             image: /images/achivements/dl-specialization-coursera.jpg
@@ -440,10 +440,10 @@ params:
     items:
       - title: 6 Years Growing in Production AI
         content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading 8 people across two parallel AI teams.
-        image: /images/achievement.jpg
+        image: /images/achivements/tree.png
       - title: C1 English
-        content: Reached C1 level post-graduation through self-study and formal exam preparation. Actively maintained through weekly speaking practice.
-        image: /images/achievement.jpg
+        content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
+        image: /images/achivements/cambridge.jpg
       - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
         content: 5-course specialization covering CNNs, RNNs, LSTMs, Transformers, hyperparameter tuning and optimization.
         image: /images/achivements/dl-specialization-coursera.jpg
