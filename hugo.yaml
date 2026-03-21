@@ -65,6 +65,8 @@ languages:
 
           Lo que he aprendido es que lo más difícil de la IA en producción no son los modelos — son las personas, la comunicación y los procesos. Llevo años moviéndome en esa frontera: con la solidez técnica para ganarme la confianza de mi equipo, y la visión organizativa para mantener las cosas en marcha cuando empiezan a atascarse.
 
+          Actualmente profundizando en AI Agents — construyendo con LangChain y LangGraph en mis proyectos personales.
+
           C1 de inglés. Lidero con claridad. Hago crecer a las personas a mi alrededor.
         skills:
           enable: true
@@ -181,16 +183,20 @@ languages:
             image: /images/achievement.jpg
           - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
             content: Especialización de 5 cursos que cubre CNNs, RNNs, LSTMs, Transformers, ajuste de hiperparámetros y optimización.
-            image: /images/achievement.jpg
+            image: /images/achivements/dl-specialization-coursera.jpg
+            url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
           - title: GANs Specialization — DeepLearning.AI · 2022
             content: Especialización de 3 cursos que cubre arquitectura GAN, estrategias de entrenamiento, generación de imágenes y traducción imagen a imagen.
-            image: /images/achievement.jpg
+            image: /images/achivements/gans-coursera.jpg
+            url: https://www.coursera.org/account/accomplishments/specialization/N859T5ZGN2S3
           - title: LangChain Essentials — LangChain Academy · 2026
             content: Curso oficial de LangChain que cubre conceptos clave e implementación en Python.
-            image: /images/achievement.jpg
+            image: /images/achivements/lgchain-academy.jpg
+            url: https://academy.langchain.com/certificates/esvdpux1vk
           - title: LangGraph Essentials — LangChain Academy · 2026
             content: Curso oficial de LangGraph que cubre flujos de trabajo de agentes con estado en Python.
-            image: /images/achievement.jpg
+            image: /images/achivements/lgraph-academy.jpg
+            url: https://academy.langchain.com/certificates/kebjr2g0jk
 
       # Projects
       projects:
@@ -322,6 +328,8 @@ params:
 
       What I've learned is that the hardest part of AI in production isn't the models — it's the people, the communication, and the process. I've spent years at that boundary: technically solid enough to earn my team's trust, and organizationally aware enough to keep things moving when they start to break down.
 
+      Currently diving deeper into AI Agents — building with LangChain and LangGraph on the side.
+
       C1 English. I lead with clarity. I grow people around me.
     skills:
       enable: true
@@ -438,16 +446,20 @@ params:
         image: /images/achievement.jpg
       - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
         content: 5-course specialization covering CNNs, RNNs, LSTMs, Transformers, hyperparameter tuning and optimization.
-        image: /images/achievement.jpg
+        image: /images/achivements/dl-specialization-coursera.jpg
+        url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
       - title: GANs Specialization — DeepLearning.AI · 2022
         content: 3-course specialization covering GAN architecture, training strategies, image generation and image-to-image translation.
-        image: /images/achievement.jpg
+        image: /images/achivements/gans-coursera.jpg
+        url: https://www.coursera.org/account/accomplishments/specialization/N859T5ZGN2S3
       - title: LangChain Essentials — LangChain Academy · 2026
         content: Official LangChain course covering core concepts and Python implementation.
-        image: /images/achievement.jpg
+        image: /images/achivements/lgchain-academy.jpg
+        url: https://academy.langchain.com/certificates/esvdpux1vk
       - title: LangGraph Essentials — LangChain Academy · 2026
         content: Official LangGraph course covering stateful agent workflows in Python.
-        image: /images/achievement.jpg
+        image: /images/achivements/lgraph-academy.jpg
+        url: https://academy.langchain.com/certificates/kebjr2g0jk
 
   # Projects
   projects:
