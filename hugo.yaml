@@ -177,25 +177,25 @@ languages:
         items:
           - title: 6 Años Creciendo en IA en Producción
             content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar 8 personas en dos equipos de IA en paralelo.
-            image: /images/achivements/tree.png
+            image: /images/achievements/tree.png
           - title: C1 de Inglés
             content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
-            image: /images/achivements/cambridge.jpg
+            image: /images/achievements/cambridge.jpg
           - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
             content: Especialización de 5 cursos que cubre CNNs, RNNs, LSTMs, Transformers, ajuste de hiperparámetros y optimización.
-            image: /images/achivements/dl-specialization-coursera.jpg
+            image: /images/achievements/dl-specialization-coursera.jpg
             url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
           - title: GANs Specialization — DeepLearning.AI · 2022
             content: Especialización de 3 cursos que cubre arquitectura GAN, estrategias de entrenamiento, generación de imágenes y traducción imagen a imagen.
-            image: /images/achivements/gans-coursera.jpg
+            image: /images/achievements/gans-coursera.jpg
             url: https://www.coursera.org/account/accomplishments/specialization/N859T5ZGN2S3
           - title: LangChain Essentials — LangChain Academy · 2026
             content: Curso oficial de LangChain que cubre conceptos clave e implementación en Python.
-            image: /images/achivements/lgchain-academy.jpg
+            image: /images/achievements/lgchain-academy.jpg
             url: https://academy.langchain.com/certificates/esvdpux1vk
           - title: LangGraph Essentials — LangChain Academy · 2026
             content: Curso oficial de LangGraph que cubre flujos de trabajo de agentes con estado en Python.
-            image: /images/achivements/lgraph-academy.jpg
+            image: /images/achievements/lgraph-academy.jpg
             url: https://academy.langchain.com/certificates/kebjr2g0jk
 
       # Projects
@@ -440,25 +440,25 @@ params:
     items:
       - title: 6 Years Growing in Production AI
         content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading 8 people across two parallel AI teams.
-        image: /images/achivements/tree.png
+        image: /images/achievements/tree.png
       - title: C1 English
         content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
-        image: /images/achivements/cambridge.jpg
+        image: /images/achievements/cambridge.jpg
       - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
         content: 5-course specialization covering CNNs, RNNs, LSTMs, Transformers, hyperparameter tuning and optimization.
-        image: /images/achivements/dl-specialization-coursera.jpg
+        image: /images/achievements/dl-specialization-coursera.jpg
         url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
       - title: GANs Specialization — DeepLearning.AI · 2022
         content: 3-course specialization covering GAN architecture, training strategies, image generation and image-to-image translation.
-        image: /images/achivements/gans-coursera.jpg
+        image: /images/achievements/gans-coursera.jpg
         url: https://www.coursera.org/account/accomplishments/specialization/N859T5ZGN2S3
       - title: LangChain Essentials — LangChain Academy · 2026
         content: Official LangChain course covering core concepts and Python implementation.
-        image: /images/achivements/lgchain-academy.jpg
+        image: /images/achievements/lgchain-academy.jpg
         url: https://academy.langchain.com/certificates/esvdpux1vk
       - title: LangGraph Essentials — LangChain Academy · 2026
         content: Official LangGraph course covering stateful agent workflows in Python.
-        image: /images/achivements/lgraph-academy.jpg
+        image: /images/achievements/lgraph-academy.jpg
         url: https://academy.langchain.com/certificates/kebjr2g0jk
 
   # Projects

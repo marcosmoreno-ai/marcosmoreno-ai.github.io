@@ -74,6 +74,7 @@
 
 #hero {
   min-height: unset;
+  padding-bottom: 3rem;
 }
 
 #hero .image.animate img:hover {
@@ -127,7 +128,7 @@
   opacity: 0.9;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .skill-group {
     grid-template-columns: 1fr;
   }
