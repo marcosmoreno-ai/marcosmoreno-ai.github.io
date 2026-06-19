@@ -113,7 +113,7 @@ languages:
             companyUrl: "https://vraia.com/"
             jobs:
               - name: "AI Tech Lead"
-                date: "2023 - Presente"
+                date: "oct. 2024 - actualidad"
                 info:
                   content: Liderando equipos de ML, Agentes y RPA
                 content: |
@@ -126,7 +126,7 @@ languages:
                   - Resolví bloqueos críticos de comunicación entre los equipos de IA e IT — malentendidos en la implementación de modelos y falta de alineación en versiones de dependencias clave (cuDNN, ONNX, TensorRT) que llevaban meses bloqueando los despliegues en producción.
 
               - name: "ML Engineer"
-                date: "2021 - 2023"
+                date: "may. 2022 - oct. 2024"
                 info:
                   content: Responsabilidad total de los proyectos de visión artificial
                 content: |
@@ -139,7 +139,7 @@ languages:
                   - Formé a los etiquetadores del equipo — perfiles no técnicos — en metodología de dataset, workflow y nociones básicas de Python y SQL para que pudiesen generar scripts propios y lanzar queries, ganando autonomía en su trabajo diario.
 
               - name: "Junior ML Engineer"
-                date: "2019 - 2021"
+                date: "may. 2020 - may. 2022"
                 info:
                   content: Primeros pasos en IA en producción
                 content: |
@@ -148,6 +148,18 @@ languages:
                   - Herramientas de automatización por iniciativa propia que mejoraron el flujo de trabajo de etiquetado del equipo.
                   - Una vez con acceso al repositorio, avancé rápidamente hacia el fine-tuning de modelos y la experimentación con TensorFlow.
                   - Primera experiencia con pipelines de despliegue de modelos en producción (formato .pb, coordinación con el equipo de IT).
+
+          - company: "CFZ Cobots"
+            companyUrl: "https://cfzcobots.com/"
+            jobs:
+              - name: "Computer Vision Engineering Intern"
+                date: "mar. 2019 - may. 2019"
+                info:
+                  content: Prácticas universitarias
+                content: |
+                  Prácticas universitarias; primer contacto con visión por computador industrial.
+
+                  - Pruebas de software con cámaras industriales Omron FH Series y cámaras de profundidad Intel RealSense en Python.
 
       # Education
       education:
@@ -376,7 +388,7 @@ params:
         companyUrl: "https://vraia.com/"
         jobs:
           - name: "AI Tech Lead"
-            date: "2023 - Present"
+            date: "Oct 2024 - Present"
             info:
               content: Leading ML, Agents and RPA teams
             content: |
@@ -389,7 +401,7 @@ params:
               - Resolved critical communication breakdowns between the AI and IT teams — misalignments in model deployment and dependency versioning (cuDNN, ONNX, TensorRT) that had been blocking production deployments for months.
 
           - name: "ML Engineer"
-            date: "2021 - 2023"
+            date: "May 2022 - Oct 2024"
             info:
               content: Full ownership of computer vision projects
             content: |
@@ -402,7 +414,7 @@ params:
               - Trained non-technical labelers in dataset methodology, workflow, and basic Python and SQL — enabling them to write their own scripts and run queries autonomously.
 
           - name: "Junior ML Engineer"
-            date: "2019 - 2021"
+            date: "May 2020 - May 2022"
             info:
               content: First steps in production AI
             content: |
@@ -411,6 +423,18 @@ params:
               - Self-initiated automation tools that improved the team's labeling workflow.
               - Once given repo access, moved quickly into model fine-tuning and experimentation with TensorFlow.
               - First experience with production model deployment pipelines (.pb format, coordinating with IT integration).
+
+      - company: "CFZ Cobots"
+        companyUrl: "https://cfzcobots.com/"
+        jobs:
+          - name: "Computer Vision Engineering Intern"
+            date: "Mar 2019 - May 2019"
+            info:
+              content: University internship
+            content: |
+              University internship; first contact with industrial computer vision.
+
+              - Software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras in Python.
 
   # Education
   education:
