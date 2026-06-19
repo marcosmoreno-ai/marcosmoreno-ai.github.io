@@ -44,7 +44,7 @@ languages:
         button:
           enable: true
           name: "Currículum"
-          url: "#"
+          url: "/files/Marcos_Moreno_CV.pdf"
           download: true
           newPage: false
         socialLinks:
@@ -319,7 +319,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
+      url: "/files/Marcos_Moreno_CV.pdf"
       download: true
       newPage: false
     socialLinks:
