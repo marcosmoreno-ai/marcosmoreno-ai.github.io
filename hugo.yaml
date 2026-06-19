@@ -190,7 +190,7 @@ languages:
           - title: 6 Años Creciendo en IA en Producción
             content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar 8 personas en dos equipos de IA en paralelo.
             image: /images/achievements/tree.png
-          - title: C1 de Inglés
+          - title: C1 Advanced (CAE) — Cambridge, 2021
             content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
             image: /images/achievements/cambridge.jpg
           - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
@@ -465,7 +465,7 @@ params:
       - title: 6 Years Growing in Production AI
         content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading 8 people across two parallel AI teams.
         image: /images/achievements/tree.png
-      - title: C1 English
+      - title: C1 Advanced (CAE) — Cambridge, 2021
         content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
         image: /images/achievements/cambridge.jpg
       - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
