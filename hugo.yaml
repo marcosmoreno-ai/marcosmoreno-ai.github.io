@@ -42,7 +42,7 @@ languages:
         bottomImage:
           enable: true
         button:
-          enable: true
+          enable: false
           name: "Currículum"
           url: "#"
           download: true
@@ -109,45 +109,54 @@ languages:
       experience:
         enable: true
         items:
-          - company: "VRAIA"
+          - company: "VRAiA"
             companyUrl: "https://vraia.com/"
             jobs:
               - name: "AI Tech Lead"
-                date: "2023 - Presente"
+                date: "oct. 2024 - actualidad · Elche, España · Híbrido"
                 info:
-                  content: Liderando equipos de ML, Agentes y RPA
+                  content: Lidera un equipo de IA de 5 personas
                 content: |
-                  Liderando dos equipos de IA en paralelo: un equipo de Machine Learning centrado en Visión Artificial (2 etiquetadores, un matemático con doctorado, un ingeniero junior de ML) y un equipo de Agentes de IA y RPA (senior fullstack, backend, frontend y un especialista en agentes) — 8 personas con perfiles y disciplinas muy distintas.
+                  Lidera un equipo de IA de 5 personas entre Computer Vision y AI Agents.
 
-                  - Supervisión técnica de múltiples sistemas de visión artificial en producción con más de 30 modelos de deep learning (CNNs y Vision Transformers) desplegados en distintos proyectos.
-                  - Gestión de equipos y mentoría de perfiles junior y senior.
-                  - Puente entre ingenieros y dirección — reportes, defensa del equipo y resolución de bloqueos.
-                  - Introduje estándares de herramientas (uv, ruff, MLflow) que mejoraron la consistencia y redujeron la fricción dentro del equipo de ML.
-                  - Resolví bloqueos críticos de comunicación entre los equipos de IA e IT — malentendidos en la implementación de modelos y falta de alineación en versiones de dependencias clave (cuDNN, ONNX, TensorRT) que llevaban meses bloqueando los despliegues en producción.
+                  - Supervisión técnica de sistemas de visión en producción con más de 30 modelos de deep learning (CNNs y Vision Transformers).
+                  - Decisiones técnicas estratégicas en visión por computador y MLOps; planificación y reuniones con stakeholders.
+                  - Introduje estándares de tooling (uv, ruff, MLflow) que mejoraron la consistencia.
+                  - Resolví bloqueos críticos entre IA e IT (cuDNN / ONNX / TensorRT) que llevaban meses frenando despliegues.
+                  - Revisión de código/PRs y trabajo técnico continuo (entrenamiento, validación, optimización de arquitecturas).
 
-              - name: "ML Engineer"
-                date: "2021 - 2023"
+              - name: "Deep Learning & Computer Vision Engineer"
+                date: "may. 2022 - oct. 2024 · Elche, España · Híbrido"
                 info:
                   content: Responsabilidad total de los proyectos de visión artificial
                 content: |
-                  Asumí la responsabilidad total de los proyectos de visión artificial tras la reestructuración del equipo. Gestioné dos líneas de trabajo separadas — redes de segmentación y clasificación — simultáneamente.
+                  Asumió la propiedad completa de los proyectos de visión tras una reestructuración.
 
-                  - Implementé MLflow para el seguimiento de modelos y mejoré los pipelines de pre/post-procesado.
-                  - Responsable del ciclo completo de ML: entrenamiento, experimentación, exportación ONNX y coordinación con IT para el despliegue en producción con TensorRT.
-                  - Refactoricé una base de código legacy de clasificación heredada en mal estado.
-                  - Incorporé y mentoricé a un nuevo miembro del equipo sin experiencia profesional previa en programación.
-                  - Formé a los etiquetadores del equipo — perfiles no técnicos — en metodología de dataset, workflow y nociones básicas de Python y SQL para que pudiesen generar scripts propios y lanzar queries, ganando autonomía en su trabajo diario.
+                  - Fine-tuning de arquitecturas como U-Net y clasificadores basados en CNN.
+                  - MLflow para seguimiento de experimentos; selección y validación de modelos.
+                  - Optimización con ONNX y mixed-precision training en TensorFlow; coordinación con IT para despliegue con TensorRT.
 
-              - name: "Junior ML Engineer"
-                date: "2019 - 2021"
+              - name: "Junior Deep Learning & Computer Vision Engineer"
+                date: "may. 2020 - may. 2022 · Aspe, España · Presencial"
                 info:
                   content: Primeros pasos en IA en producción
                 content: |
-                  Me incorporé durante un despliegue crítico en producción. Antes de tener acceso al repositorio, construí proactivamente herramientas en Python para automatizar tareas repetitivas de etiquetado y una app prototipo para gestionar divisiones del dataset — que luego sirvió de base para una herramienta interna más robusta.
+                  Primera experiencia en IA en producción; antes de tener acceso al repo construyó tooling en Python para automatizar etiquetado y un prototipo de gestión de splits.
 
-                  - Herramientas de automatización por iniciativa propia que mejoraron el flujo de trabajo de etiquetado del equipo.
-                  - Una vez con acceso al repositorio, avancé rápidamente hacia el fine-tuning de modelos y la experimentación con TensorFlow.
-                  - Primera experiencia con pipelines de despliegue de modelos en producción (formato .pb, coordinación con el equipo de IT).
+                  - Fine-tuning y experimentación con TensorFlow.
+                  - Primeros pipelines de despliegue en producción (.pb, integración con IT).
+
+          - company: "CFZ Cobots"
+            companyUrl: "https://cfzcobots.com/"
+            jobs:
+              - name: "Computer Vision Engineering Intern"
+                date: "mar. 2019 - may. 2019 · Elche, España · Presencial"
+                info:
+                  content: Prácticas universitarias
+                content: |
+                  Prácticas universitarias; primer contacto con visión por computador industrial.
+
+                  - Pruebas de software con cámaras industriales Omron FH Series y cámaras de profundidad Intel RealSense en Python.
 
       # Education
       education:
@@ -159,29 +168,21 @@ languages:
               name: "Universidad de Alicante"
               url: "https://www.ua.es"
             date: "2015 - 2019"
-            content: |-
-              Trabajo Fin de Grado: Asistente visual con IA para peatones ciegos en cruces.
-
-              - Dataset propio de 1.010 imágenes etiquetadas (semáforo verde, semáforo rojo, paso de peatones) capturadas en varias ciudades españolas, de día y de noche.
-              - Entrenamiento de YOLOv3 sobre Darknet con GPU Nvidia Quadro P6000, alcanzando un 92% de recall y 75% IoU en el conjunto de test.
-              - Servidor Flask en Python para servir el modelo como API.
-              - App Android en Java que consumía las predicciones y alertaba al usuario mediante vibración y sonido.
+            content: ""
             featuredLink:
               enable: false
-              name: "Ver proyecto"
-              url: "https://example.com"
 
       # Achievements
       achievements:
         enable: true
         items:
           - title: 6 Años Creciendo en IA en Producción
-            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar 8 personas en dos equipos de IA en paralelo.
+            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar un equipo de IA en producción.
             image: /images/achievements/tree.png
-          - title: C1 de Inglés
-            content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
+          - title: C1 Advanced (CAE) — Cambridge, 2021
+            content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales."
             image: /images/achievements/cambridge.jpg
-          - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
+          - title: Deep Learning Specialization — DeepLearning.AI · 2021
             content: Especialización de 5 cursos que cubre CNNs, RNNs, LSTMs, Transformers, ajuste de hiperparámetros y optimización.
             image: /images/achievements/dl-specialization-coursera.jpg
             url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
@@ -202,18 +203,24 @@ languages:
       projects:
         enable: true
         items:
-          - title: Asistente Visual para Peatones Ciegos
-            content: Sistema de IA de extremo a extremo para ayudar a personas con discapacidad visual a cruzar pasos de peatones de forma segura, bajo cualquier condición de iluminación. Construí un dataset personalizado de 1.010 imágenes, fine-tuné YOLOv3 alcanzando un 92% de recall y 75% IoU. Servido mediante API Flask, consumido por una app Android con retroalimentación háptica y de audio. Validado en pruebas reales en calle con un 100% de acierto.
-            image: /images/projects/mem-port.jpg
+          - title: lgagent
+            content: Agente LangGraph que procesa pedidos de clientes recibidos por email, gestiona peticiones ambiguas y el ciclo de vida del pedido con confirmación human-in-the-loop.
+            image: /images/projects/profile2.jpg
             badges:
-              - "YOLOv3"
-              - "Flask"
-              - "Android"
+              - "LangGraph"
               - "Python"
-              - "Darknet"
             links:
-              - icon: fas fa-file-pdf
-                url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
+              - icon: fab fa-github
+                url: https://github.com/marcosmoreno-ai/lgagent
+          - title: mm-pyboiler
+            content: Plantilla de proyecto Python (pyproject.toml, pre-commit hooks) con convenciones listas para producción.
+            image: /images/projects/profile.png
+            badges:
+              - "Python"
+              - "Docker"
+            links:
+              - icon: fab fa-github
+                url: https://github.com/marcosmoreno-ai/mm-pyboiler
 
       # Contact
       contact:
@@ -305,7 +312,7 @@ params:
     bottomImage:
       enable: true
     button:
-      enable: true
+      enable: false
       name: "Resume"
       url: "#"
       download: true
@@ -372,45 +379,54 @@ params:
   experience:
     enable: true
     items:
-      - company: "VRAIA"
+      - company: "VRAiA"
         companyUrl: "https://vraia.com/"
         jobs:
           - name: "AI Tech Lead"
-            date: "2023 - Present"
+            date: "Oct 2024 - Present · Elche, Spain · Hybrid"
             info:
-              content: Leading ML, Agents and RPA teams
+              content: Leading a 5-person AI team
             content: |
-              Leading two parallel AI teams: a Machine Learning team focused on Computer Vision (2 labelers, a PhD mathematician, a junior ML engineer) and an AI Agents & RPA team (senior fullstack, backend, frontend and an agent specialist) — 8 people across very different profiles and disciplines.
+              Leads a 5-person AI team across Computer Vision and AI Agents.
 
-              - Technical oversight of multiple production computer vision systems with 30+ deep learning models (CNNs and Vision Transformers) deployed across different projects.
-              - Team management and mentoring across junior and senior profiles.
-              - Bridge between engineers and upper management — reporting, protecting the team, unblocking delivery.
-              - Introduced tooling standards (uv, ruff, MLflow) that improved consistency and reduced friction within the ML team.
-              - Resolved critical communication breakdowns between the AI and IT teams — misalignments in model deployment and dependency versioning (cuDNN, ONNX, TensorRT) that had been blocking production deployments for months.
+              - Technical oversight of production computer vision systems with 30+ deep learning models (CNNs and Vision Transformers).
+              - Strategic technical decisions in computer vision and MLOps; planning and stakeholder meetings.
+              - Introduced tooling standards (uv, ruff, MLflow) that improved consistency.
+              - Resolved critical AI–IT communication breakdowns (cuDNN / ONNX / TensorRT) that had been blocking deployments for months.
+              - Code/PR reviews and ongoing hands-on technical work (training, validation, architecture optimisation).
 
-          - name: "ML Engineer"
-            date: "2021 - 2023"
+          - name: "Deep Learning & Computer Vision Engineer"
+            date: "May 2022 - Oct 2024 · Elche, Spain · Hybrid"
             info:
               content: Full ownership of computer vision projects
             content: |
-              Took full ownership of computer vision projects after the team restructured. Managed two separate workstreams — segmentation and classification networks — simultaneously.
+              Took full ownership of computer vision projects after team restructuring.
 
-              - Implemented MLflow for model tracking and improved pre/post-processing pipelines.
-              - Owned the full ML lifecycle: training, experimentation, ONNX export and coordination with IT for TensorRT production deployment.
-              - Refactored a legacy classification codebase inherited in poor condition.
-              - Onboarded and mentored a new team member with no prior professional programming experience.
-              - Trained non-technical labelers in dataset methodology, workflow, and basic Python and SQL — enabling them to write their own scripts and run queries autonomously.
+              - Fine-tuned architectures including U-Net and CNN-based classifiers.
+              - MLflow for experiment tracking; model selection and validation.
+              - ONNX optimisation and mixed-precision training in TensorFlow; coordination with IT for TensorRT deployment.
 
-          - name: "Junior ML Engineer"
-            date: "2019 - 2021"
+          - name: "Junior Deep Learning & Computer Vision Engineer"
+            date: "May 2020 - May 2022 · Aspe, Spain · On-site"
             info:
               content: First steps in production AI
             content: |
-              Joined during a critical production deployment. Before getting repo access, proactively built Python tooling to automate repetitive labeling tasks and a prototype app to manage dataset splits — later used as the basis for a more robust internal tool.
+              First production AI experience; before repo access, proactively built Python tooling to automate labelling and a prototype for managing dataset splits.
 
-              - Self-initiated automation tools that improved the team's labeling workflow.
-              - Once given repo access, moved quickly into model fine-tuning and experimentation with TensorFlow.
-              - First experience with production model deployment pipelines (.pb format, coordinating with IT integration).
+              - Model fine-tuning and experimentation with TensorFlow.
+              - First production deployment pipelines (.pb format, IT integration).
+
+      - company: "CFZ Cobots"
+        companyUrl: "https://cfzcobots.com/"
+        jobs:
+          - name: "Computer Vision Engineering Intern"
+            date: "Mar 2019 - May 2019 · Elche, Spain · On-site"
+            info:
+              content: University internship
+            content: |
+              University internship; first contact with industrial computer vision.
+
+              - Software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras in Python.
 
   # Education
   education:
@@ -422,34 +438,26 @@ params:
           name: "University of Alicante"
           url: "https://www.ua.es"
         date: "2015 - 2019"
-        content: |-
-          Final Thesis: AI-powered visual assistant for blind pedestrians at crossings.
-
-          - Custom dataset of 1,010 labeled images (green light, red light, pedestrian crossing) captured across multiple Spanish cities, day and night.
-          - Fine-tuned YOLOv3 on Darknet using an Nvidia Quadro P6000 GPU, reaching 92% recall and 75% IoU on the test set.
-          - Flask server in Python to serve the model as an API.
-          - Android app in Java consuming predictions and alerting the user via haptic and audio feedback.
+        content: ""
         featuredLink:
           enable: false
-          name: "View project"
-          url: "https://example.com"
 
   # Achievements
   achievements:
     enable: true
     items:
       - title: 6 Years Growing in Production AI
-        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading 8 people across two parallel AI teams.
+        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading an AI team in production.
         image: /images/achievements/tree.png
-      - title: C1 English
-        content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
+      - title: C1 Advanced (CAE) — Cambridge, 2021
+        content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes."
         image: /images/achievements/cambridge.jpg
-      - title: Deep Learning Specialization — DeepLearning.AI · Andrew Ng · 2021
-        content: 5-course specialization covering CNNs, RNNs, LSTMs, Transformers, hyperparameter tuning and optimization.
+      - title: Deep Learning Specialization — DeepLearning.AI · 2021
+        content: Specialization across 5 courses covering CNNs, RNNs, LSTMs, Transformers, hyperparameter tuning and optimization.
         image: /images/achievements/dl-specialization-coursera.jpg
         url: https://www.coursera.org/account/accomplishments/specialization/PCX3PLHHZVJX
       - title: GANs Specialization — DeepLearning.AI · 2022
-        content: 3-course specialization covering GAN architecture, training strategies, image generation and image-to-image translation.
+        content: Specialization across 3 courses covering GAN architecture, training strategies, image generation and image-to-image translation.
         image: /images/achievements/gans-coursera.jpg
         url: https://www.coursera.org/account/accomplishments/specialization/N859T5ZGN2S3
       - title: LangChain Essentials — LangChain Academy · 2026
@@ -465,18 +473,24 @@ params:
   projects:
     enable: true
     items:
-      - title: Visual Assistant for Blind Pedestrians
-        content: End-to-end AI system to help visually impaired people cross pedestrian crossings safely, under any lighting condition. Built a custom dataset of 1,010 images, fine-tuned YOLOv3 reaching 92% recall and 75% IoU. Served via Flask API, consumed by an Android app with haptic and audio feedback. Validated in real-world tests with 100% accuracy.
-        image: /images/projects/mem-port.jpg
+      - title: lgagent
+        content: LangGraph agent that processes customer orders received by email, handles ambiguous requests, and manages the order lifecycle with human-in-the-loop confirmation.
+        image: /images/projects/profile2.jpg
         badges:
-          - "YOLOv3"
-          - "Flask"
-          - "Android"
+          - "LangGraph"
           - "Python"
-          - "Darknet"
         links:
-          - icon: fas fa-file-pdf
-            url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
+          - icon: fab fa-github
+            url: https://github.com/marcosmoreno-ai/lgagent
+      - title: mm-pyboiler
+        content: Python project template (pyproject.toml, pre-commit hooks) with production-ready conventions out of the box.
+        image: /images/projects/profile.png
+        badges:
+          - "Python"
+          - "Docker"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/marcosmoreno-ai/mm-pyboiler
 
   # Contact
   contact:
