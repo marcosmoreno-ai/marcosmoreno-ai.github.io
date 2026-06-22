@@ -1,7 +1,6 @@
 baseURL: "https://marcosmoreno-ai.github.io/"
 languageCode: "en-us"
 title: "Marcos Moreno Martínez"
-theme: hugo-profile
 
 # Multilingual configuration
 defaultContentLanguage: "en"
