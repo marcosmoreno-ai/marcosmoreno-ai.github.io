@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcos Moreno — redesign preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F3; --paper-2:#F1EEE6; --card:#FFFFFF;
+    --ink:#15181C; --ink-2:#565C63; --ink-3:#8A9098;
+    --line:#E5E0D5;
+    --accent:#FF4A1C; --accent-ink:#B5310E; --accent-soft:rgba(255,74,28,.10);
+    --disp:"Space Grotesk",sans-serif; --body:"Inter",sans-serif; --mono:"JetBrains Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink); font-family:var(--body);
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(var(--line) .9px, transparent .9px);
+    background-size:26px 26px;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:30;background:rgba(250,248,243,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:var(--mono);font-weight:500;font-size:14px;letter-spacing:.06em}
+  .brand b{color:var(--accent)}
+  .links{display:flex;gap:26px;align-items:center;font-size:13px}
+  .links a{color:var(--ink-2);text-decoration:none}
+  .links a:hover{color:var(--ink)}
+  .lang{font-family:var(--mono);font-size:12px;color:var(--ink-3);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+  .lang b{color:var(--ink)}
+  @media(max-width:760px){.links{display:none}}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:72px 0 56px}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;gap:36px;padding:48px 0 40px}}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);display:flex;align-items:center;gap:10px;margin-bottom:22px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,74,28,.45)}70%{box-shadow:0 0 0 8px rgba(255,74,28,0)}100%{box-shadow:0 0 0 0 rgba(255,74,28,0)}}
+  .conf{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin-bottom:14px}
+  .conf .bar{display:inline-block;width:120px;height:6px;background:var(--paper-2);border:1px solid var(--line);border-radius:3px;vertical-align:middle;margin:0 8px;overflow:hidden}
+  .conf .fill{display:block;height:100%;width:0;background:var(--accent);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+  h1{font-family:var(--disp);font-weight:700;font-size:clamp(38px,6vw,68px);line-height:.98;letter-spacing:-.02em;margin-bottom:16px}
+  .role{font-family:var(--disp);font-weight:500;font-size:clamp(18px,2.4vw,23px);color:var(--ink);display:inline-flex;align-items:center;gap:12px;margin-bottom:20px}
+  .tag{font-family:var(--mono);font-size:11px;color:var(--accent-ink);background:var(--accent-soft);border:1px solid rgba(255,74,28,.25);padding:3px 9px;border-radius:5px}
+  .lead{font-size:17px;color:var(--ink-2);max-width:38ch;margin-bottom:30px}
+  .lead b{color:var(--ink);font-weight:500}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-family:var(--mono);font-size:13px;text-decoration:none;padding:12px 18px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#fff;font-weight:500}
+  .btn-primary:hover{background:#e83d12}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--ink-3);background:#fff}
+
+  /* detection frame */
+  .frame{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--paper-2);border:1px solid var(--line)}
+  .frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.02)}
+  .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--ink-3);font-size:13px}
+  .ovl{position:absolute;inset:0;pointer-events:none}
+  .ovl svg{width:100%;height:100%}
+  .box{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.6s .35s forwards cubic-bezier(.5,0,.2,1)}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .chip{position:absolute;font-family:var(--mono);font-size:11.5px;background:var(--accent);color:#fff;padding:2px 8px;border-radius:0 5px 5px 0;opacity:0;transform:translateY(4px);animation:chip .4s 1.7s forwards}
+  .chip.b{background:var(--ink);border-radius:5px}
+  @keyframes chip{to{opacity:1;transform:translateY(0)}}
+  .c-main{left:8%;top:6%}
+  .c2{right:8%;top:46%}
+
+  /* metrics */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:8px 0 64px}
+  @media(max-width:760px){.metrics{grid-template-columns:repeat(2,1fr)}}
+  .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;position:relative;overflow:hidden}
+  .m::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:.85}
+  .m .lbl{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-bottom:10px;text-transform:lowercase}
+  .m .num{font-family:var(--disp);font-weight:700;font-size:40px;line-height:1;letter-spacing:-.02em}
+  .m .num .u{font-size:20px;color:var(--accent);margin-left:2px}
+  .m .sub{font-size:13px;color:var(--ink-2);margin-top:8px}
+
+  /* section */
+  section.block{padding:18px 0 70px}
+  .sec-eye{font-family:var(--mono);font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .sec-eye .br{color:var(--accent)}
+  .sec-h{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:-.02em;margin-bottom:26px}
+  .stack{display:flex;flex-wrap:wrap;gap:9px}
+  .pill{font-family:var(--mono);font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);padding:7px 13px;border-radius:7px;transition:all .15s;cursor:default}
+  .pill:hover{color:var(--ink);border-color:var(--ink-3);transform:translateY(-2px)}
+  .pill.hot{color:#fff;background:var(--accent);border-color:var(--accent)}
+  .pill.hot:hover{background:#e83d12}
+  .grp{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin:22px 0 11px}
+
+  /* exp card */
+  .xcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;max-width:760px}
+  .xtop{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:6px;flex-wrap:wrap}
+  .xrole{font-family:var(--disp);font-weight:500;font-size:20px}
+  .xwhen{font-family:var(--mono);font-size:12px;color:var(--accent-ink);background:var(--accent-soft);padding:3px 9px;border-radius:5px}
+  .xco{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-bottom:14px}
+  .xcard p{font-size:15px;color:var(--ink-2)}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--paper);border-radius:18px;padding:52px 40px;text-align:center;margin-bottom:64px}
+  .contact .sec-eye{justify-content:center;color:#9aa0a6}
+  .contact h2{font-family:var(--disp);font-weight:700;font-size:clamp(26px,4vw,40px);letter-spacing:-.02em;margin:6px 0 14px}
+  .contact p{color:#b9bfc5;max-width:46ch;margin:0 auto 26px;font-size:16px}
+  .contact .btn-primary:hover{background:#ff5e34}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .box{stroke-dashoffset:0}.chip{opacity:1;transform:none}.reveal{opacity:1;transform:none}
+    .conf .fill{width:98%!important}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand">marcos<b>.</b>moreno</div>
+    <div class="links">
+      <a href="#">about</a><a href="#">experience</a><a href="#">projects</a><a href="#">achievements</a><a href="#">contact</a>
+      <span class="lang"><b>EN</b> / ES</span>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap hero">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> inference: live · model v2026</div>
+    <div class="conf">person<span class="bar"><span class="fill" id="fill"></span></span><span id="conf">0.00</span></div>
+    <h1>Marcos Moreno Martínez</h1>
+    <div class="role">AI Engineering Leader <span class="tag">class: lead</span></div>
+    <p class="lead">I build and scale AI teams that <b>actually ship</b>. 6 years turning complex computer vision systems into delivering teams.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#">↓ View résumé</a>
+      <a class="btn btn-ghost" href="#">GitHub</a>
+      <a class="btn btn-ghost" href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div>
+    <div class="frame">
+      <div class="ph">[ portrait ]</div>
+      <img src="https://marcosmoreno-ai.github.io/images/ai-cv-image-2.jpg" alt="Marcos Moreno" onerror="this.style.display='none'">
+      <div class="ovl">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="none">
+          <rect class="box" x="34" y="30" width="332" height="440" rx="6"/>
+        </svg>
+      </div>
+      <div class="chip c-main">ai_engineering_leader · 0.98</div>
+      <div class="chip b c2">computer_vision</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="metrics reveal">
+    <div class="m"><div class="lbl">years_in_production</div><div class="num"><span data-n="6">0</span></div><div class="sub">junior → tech lead, same company</div></div>
+    <div class="m"><div class="lbl">models_shipped</div><div class="num"><span data-n="30">0</span><span class="u">+</span></div><div class="sub">CNNs &amp; Vision Transformers, live</div></div>
+    <div class="m"><div class="lbl">people_led</div><div class="num"><span data-n="8">0</span></div><div class="sub">across 2 parallel AI teams</div></div>
+    <div class="m"><div class="lbl">thesis_recall</div><div class="num"><span data-n="92">0</span><span class="u">%</span></div><div class="sub">YOLOv3, 75% IoU on test set</div></div>
+  </div>
+</div>
+
+<section class="block wrap reveal">
+  <div class="sec-eye"><span class="br">[</span> classes detected <span class="br">]</span></div>
+  <div class="sec-h">The stack, in production</div>
+  <div class="grp">// ml &amp; deep learning</div>
+  <div class="stack">
+    <span class="pill hot">PyTorch</span><span class="pill hot">TensorFlow</span><span class="pill">Keras</span><span class="pill hot">OpenCV</span><span class="pill">NumPy</span><span class="pill">pandas</span><span class="pill">scikit-learn</span><span class="pill">ONNX</span><span class="pill">ONNXRuntime</span>
+  </div>
+  <div class="grp">// mlops &amp; infra</div>
+  <div class="stack">
+    <span class="pill hot">MLflow</span><span class="pill">uv</span><span class="pill">ruff</span><span class="pill">Docker</span><span class="pill">CUDA</span><span class="pill">cuDNN</span><span class="pill">PostgreSQL</span><span class="pill">Ceph</span>
+  </div>
+  <div class="grp">// ai agents</div>
+  <div class="stack">
+    <span class="pill hot">LangChain</span><span class="pill hot">LangGraph</span>
+  </div>
+</section>
+
+<section class="block wrap reveal">
+  <div class="sec-eye"><span class="br">[</span> experience <span class="br">]</span></div>
+  <div class="sec-h">Where it shipped</div>
+  <div class="xcard">
+    <div class="xtop">
+      <div class="xrole">AI Tech Lead</div>
+      <div class="xwhen">2023 — present · VRAIA</div>
+    </div>
+    <div class="xco">leading 8 people across a Computer Vision team and an AI Agents &amp; RPA team</div>
+    <p>The hardest part of AI in production isn't the models — it's the people, the communication and the process. I sit at that boundary: technical enough to earn the team's trust, organisationally aware enough to keep delivery moving when things break down.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="contact reveal">
+    <div class="sec-eye"><span class="br">[</span> contact <span class="br">]</span></div>
+    <h2>Let's build something that ships</h2>
+    <p>My inbox is always open — whether it's a question, a role, or just to say hi.</p>
+    <a class="btn btn-primary" href="#">→ Mail me</a>
+  </section>
+</div>
+
+<script>
+  window.addEventListener('load',function(){
+    document.getElementById('fill').style.width='98%';
+    var c=document.getElementById('conf'),v=0;
+    var t=setInterval(function(){v+=0.04;if(v>=0.98){v=0.98;clearInterval(t)}c.textContent=v.toFixed(2)},58);
+  });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      e.target.classList.add('in');
+      e.target.querySelectorAll('[data-n]').forEach(function(el){
+        var tgt=+el.dataset.n,cur=0,step=Math.max(1,Math.round(tgt/34));
+        var iv=setInterval(function(){cur+=step;if(cur>=tgt){cur=tgt;clearInterval(iv)}el.textContent=cur},26);
+      });
+      io.unobserve(e.target);
+    });
+  },{threshold:.3});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
