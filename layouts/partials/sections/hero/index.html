@@ -20,7 +20,7 @@
         <a class="rd-btn rd-btn-primary" href="{{ $btn.url }}"
            {{ if $btn.download }}download{{ end }}
            {{ if $btn.newPage }}target="_blank" rel="noopener"{{ end }}>
-          <span aria-hidden="true">↓</span>&nbsp;{{ $hero.button.name | default $btn.name }}
+          <span aria-hidden="true">↓</span> {{ $hero.button.name | default $btn.name }}
         </a>
         {{ end }}
         {{ $labels := dict "fa-github" "GitHub" "fa-linkedin" "LinkedIn" }}
@@ -28,7 +28,7 @@
           {{ $key := .icon | replaceRE ".*?(fa-[a-z-]+).*" "$1" }}
           {{ $label := index $labels $key | default ($key | replaceRE "fa-" "" | title) }}
           <a class="rd-btn rd-btn-ghost" href="{{ .url }}" target="_blank" rel="noopener">
-            <i class="{{ .icon }}" aria-hidden="true"></i>&nbsp;{{ $label }}
+            <i class="{{ .icon }}" aria-hidden="true"></i> {{ $label }}
           </a>
         {{ end }}
       </div>

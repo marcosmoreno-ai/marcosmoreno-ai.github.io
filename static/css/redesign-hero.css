@@ -1,12 +1,16 @@
 /* =====================================================================
    Redesign — Hero (Phase 3)
-   Everything is scoped under #hero so it cannot leak into the sections
-   that are not redesigned yet. Tokens come from redesign-foundations.css.
+   Scoped under #hero.rd-hero so it cannot leak into the not-yet-redesigned
+   sections, and so it beats the vendored theme rules — which use
+   `#hero h1 { color: ... !important }` and `body { font-family: Lora
+   !important }`. Tokens come from redesign-foundations.css.
    ===================================================================== */
 
 #hero.rd-hero {
   min-height: unset;
   padding: 0;
+  display: block;
+  line-height: 1.6;
   color: var(--ink);
   font-family: var(--body);
   /* paper surface + faint dotted grid (grid switched on, hero-scoped for now) */
@@ -15,13 +19,13 @@
   background-size: 26px 26px;
 }
 
-#hero .rd-wrap {
+#hero.rd-hero .rd-wrap {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 28px;
 }
 
-#hero .rd-hero-grid {
+#hero.rd-hero .rd-hero-grid {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: 48px;
@@ -30,7 +34,7 @@
 }
 
 @media (max-width: 860px) {
-  #hero .rd-hero-grid {
+  #hero.rd-hero .rd-hero-grid {
     grid-template-columns: 1fr;
     gap: 36px;
     padding: 48px 0 40px;
@@ -38,8 +42,8 @@
 }
 
 /* --- eyebrow + live dot --- */
-#hero .rd-eyebrow {
-  font-family: var(--mono);
+#hero.rd-hero .rd-eyebrow {
+  font-family: var(--mono) !important;
   font-size: 12.5px;
   color: var(--ink-2);
   display: flex;
@@ -47,7 +51,7 @@
   gap: 10px;
   margin-bottom: 22px;
 }
-#hero .rd-dot {
+#hero.rd-hero .rd-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -62,13 +66,13 @@
 }
 
 /* --- confidence read-out --- */
-#hero .rd-conf {
-  font-family: var(--mono);
+#hero.rd-hero .rd-conf {
+  font-family: var(--mono) !important;
   font-size: 12.5px;
   color: var(--ink-2);
   margin-bottom: 14px;
 }
-#hero .rd-bar {
+#hero.rd-hero .rd-bar {
   display: inline-block;
   width: 120px;
   height: 6px;
@@ -79,7 +83,7 @@
   margin: 0 8px;
   overflow: hidden;
 }
-#hero .rd-fill {
+#hero.rd-hero .rd-fill {
   display: block;
   height: 100%;
   width: 0;
@@ -88,100 +92,104 @@
 }
 
 /* --- name / role / lead --- */
-#hero .rd-hero-intro {
-  font-family: var(--mono);
+#hero.rd-hero .rd-hero-intro {
+  font-family: var(--mono) !important;
   font-size: 13px;
   color: var(--ink-3);
   display: block;
   margin-bottom: 8px;
 }
-#hero .rd-hero-name {
-  font-family: var(--disp);
+#hero.rd-hero .rd-hero-name {
+  font-family: var(--disp) !important;
   font-weight: 700;
   font-size: clamp(38px, 6vw, 68px);
   line-height: .98;
   letter-spacing: -.02em;
-  color: var(--ink);
+  color: var(--ink) !important;   /* beat theme's `#hero h1 { color: ... !important }` */
   margin: 0 0 16px;
 }
-#hero .rd-hero-role {
-  font-family: var(--disp);
+#hero.rd-hero .rd-hero-role {
+  font-family: var(--disp) !important;
   font-weight: 500;
   font-size: clamp(18px, 2.4vw, 23px);
   color: var(--ink);
+  opacity: 1;                     /* beat theme's `#hero p { opacity: .8 }` */
   display: inline-flex;
   align-items: center;
   gap: 12px;
   margin: 0 0 20px;
 }
-#hero .rd-tag {
-  font-family: var(--mono);
+#hero.rd-hero .rd-tag {
+  font-family: var(--mono) !important;
   font-size: 11px;
+  font-weight: 500;
   color: var(--accent-ink);
   background: var(--accent-soft);
   border: 1px solid rgba(255, 74, 28, .25);
   padding: 3px 9px;
   border-radius: 5px;
 }
-#hero .rd-hero-lead {
-  font-family: var(--body);
+#hero.rd-hero .rd-hero-lead {
+  font-family: var(--body) !important;
   font-size: 17px;
   line-height: 1.6;
   color: var(--ink-2);
-  max-width: 42ch;
+  opacity: 1;
+  max-width: 38ch;
   margin: 0 0 30px;
 }
 
 /* --- CTAs --- */
-#hero .rd-cta {
+#hero.rd-hero .rd-cta {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
-#hero .rd-btn {
-  font-family: var(--mono);
+#hero.rd-hero .rd-btn {
+  font-family: var(--mono) !important;
   font-size: 13px;
   text-decoration: none;
   padding: 12px 18px;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
+  margin: 0;
   transition: transform .15s, background .15s, border-color .15s;
 }
-#hero .rd-btn:hover {
+#hero.rd-hero .rd-btn:hover {
   transform: translateY(-2px);
 }
-#hero .rd-btn-primary {
+#hero.rd-hero .rd-btn-primary {
   background: var(--accent);
   color: #fff;
   font-weight: 500;
+  border: 1px solid var(--accent);
 }
-#hero .rd-btn-primary:hover {
+#hero.rd-hero .rd-btn-primary:hover {
   background: #e83d12;
   color: #fff;
 }
-#hero .rd-btn-ghost {
+#hero.rd-hero .rd-btn-ghost {
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--line);
 }
-#hero .rd-btn-ghost:hover {
+#hero.rd-hero .rd-btn-ghost:hover {
   border-color: var(--ink-3);
   background: #fff;
   color: var(--ink);
 }
-#hero .rd-btn:focus-visible {
+#hero.rd-hero .rd-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 /* --- detection frame --- */
-#hero .rd-hero-figure {
-  max-width: 380px;
+#hero.rd-hero .rd-hero-figure {
   width: 100%;
-  margin: 0 auto;
 }
-#hero .rd-frame {
+#hero.rd-hero .rd-frame {
   position: relative;
   aspect-ratio: 4 / 5;
   border-radius: 14px;
@@ -189,23 +197,27 @@
   background: var(--paper-2);
   border: 1px solid var(--line);
 }
-#hero .rd-portrait {
+#hero.rd-hero .rd-portrait {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
   filter: saturate(.92) contrast(1.02);
 }
-#hero .rd-ovl {
+#hero.rd-hero .rd-ovl {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
-#hero .rd-ovl svg {
+#hero.rd-hero .rd-ovl svg {
   width: 100%;
   height: 100%;
 }
-#hero .rd-box {
+#hero.rd-hero .rd-box {
   fill: none;
   stroke: var(--accent);
   stroke-width: 2.5;
@@ -219,8 +231,8 @@
 
 /* --- reduced motion: render final states, no animation --- */
 @media (prefers-reduced-motion: reduce) {
-  #hero .rd-box { stroke-dashoffset: 0; animation: none; }
-  #hero .rd-fill { width: 98% !important; transition: none; }
-  #hero .rd-dot { animation: none; }
-  #hero .rd-btn { transition: none; }
+  #hero.rd-hero .rd-box { stroke-dashoffset: 0; animation: none; }
+  #hero.rd-hero .rd-fill { width: 98% !important; transition: none; }
+  #hero.rd-hero .rd-dot { animation: none; }
+  #hero.rd-hero .rd-btn { transition: none; }
 }
