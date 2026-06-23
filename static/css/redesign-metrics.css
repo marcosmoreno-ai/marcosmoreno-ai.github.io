@@ -1,0 +1,105 @@
+/* =====================================================================
+   Redesign — Metrics readout band (Phase 4a, variant A "readout cards")
+   Scoped under #metrics.rd-metrics. Paper surface continuous with the hero;
+   four readout cards with bracket corners (a nod to the bounding box).
+   Tokens from redesign-foundations.css.
+   ===================================================================== */
+
+#metrics.rd-metrics {
+  padding: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  /* paper surface + faint grid, continuous with the hero */
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--line) .9px, transparent .9px);
+  background-size: 26px 26px;
+}
+
+#metrics.rd-metrics .rd-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+#metrics.rd-metrics .rd-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 8px 0 64px;
+}
+
+@media (max-width: 760px) {
+  #metrics.rd-metrics .rd-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- card --- */
+#metrics.rd-metrics .rd-mcard {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+
+/* bracket corners — thin orange L-marks (bounding-box vernacular) */
+#metrics.rd-metrics .rd-corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+}
+#metrics.rd-metrics .rd-corner-tl { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
+#metrics.rd-metrics .rd-corner-tr { top: 8px; right: 8px; border-left: 0; border-bottom: 0; }
+#metrics.rd-metrics .rd-corner-bl { bottom: 8px; left: 8px; border-right: 0; border-top: 0; }
+#metrics.rd-metrics .rd-corner-br { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
+
+/* --- readout text --- */
+#metrics.rd-metrics .rd-mlabel {
+  font-family: var(--mono) !important;
+  font-size: 11px;
+  letter-spacing: .02em;
+  text-transform: lowercase;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+}
+#metrics.rd-metrics .rd-mvalue {
+  font-family: var(--disp) !important;
+  font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+#metrics.rd-metrics .rd-mvalue .rd-accent {
+  color: var(--accent);
+}
+#metrics.rd-metrics .rd-msub {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* --- reveal on scroll ---
+   Hidden state applies only when JS is available (html.rd-js), so no-JS
+   users always see the cards and there is no flash before paint. */
+html.rd-js #metrics.rd-metrics .rd-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s, transform .7s;
+}
+html.rd-js #metrics.rd-metrics .rd-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.rd-js #metrics.rd-metrics .rd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

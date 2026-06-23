@@ -53,6 +53,31 @@ languages:
             - icon: fab fa-github
               url: https://github.com/marcosmoreno-ai
 
+      # Metrics readout band (Phase 4a)
+      metrics:
+        enable: true
+        items:
+          - label: "role"
+            pre: "AI Tech "
+            accent: "Lead"
+            post: ""
+            sub: "@ VRAIA · desde 2024"
+          - label: "team"
+            pre: "8 personas"
+            accent: ""
+            post: ""
+            sub: "computer vision + ai agents"
+          - label: "trajectory"
+            pre: "6 años, una empresa"
+            accent: ""
+            post: ""
+            sub: "junior → tech lead"
+          - label: "focus"
+            pre: "investigación "
+            accent: "→"
+            post: " producción"
+            sub: "donde los modelos llegan a producción"
+
       # About
       about:
         enable: true
@@ -327,6 +352,31 @@ params:
           url: https://www.linkedin.com/in/marcos-moreno-mart%C3%ADnez/
         - icon: fab fa-github
           url: https://github.com/marcosmoreno-ai
+
+  # Metrics readout band (Phase 4a)
+  metrics:
+    enable: true
+    items:
+      - label: "role"
+        pre: "AI Tech "
+        accent: "Lead"
+        post: ""
+        sub: "@ VRAIA · since 2024"
+      - label: "team"
+        pre: "8 people"
+        accent: ""
+        post: ""
+        sub: "computer vision + ai agents"
+      - label: "trajectory"
+        pre: "6 yrs, one company"
+        accent: ""
+        post: ""
+        sub: "junior → tech lead"
+      - label: "focus"
+        pre: "research "
+        accent: "→"
+        post: " production"
+        sub: "where models actually ship"
 
   # About
   about:

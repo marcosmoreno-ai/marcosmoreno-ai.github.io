@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="/css/custom.css" media="all">
 
+<!-- Mark JS available before body paint so scroll-reveal can hide-then-animate
+     without a flash, while no-JS users keep the content visible. -->
+<script>document.documentElement.classList.add('rd-js')</script>
+
 <!-- Redesign webfonts: Space Grotesk (display), Inter (body), JetBrains Mono (data) — loaded once -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,3 +14,6 @@
 
 <!-- Redesign hero (Phase 3) -->
 <link rel="stylesheet" href="/css/redesign-hero.css" media="all">
+
+<!-- Redesign metrics band (Phase 4a) -->
+<link rel="stylesheet" href="/css/redesign-metrics.css" media="all">
