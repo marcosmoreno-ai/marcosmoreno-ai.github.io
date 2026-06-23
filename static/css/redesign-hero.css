@@ -229,10 +229,36 @@
   to { stroke-dashoffset: 0; }
 }
 
+/* single YOLO-style detection label, anchored to the box's top-left edge
+   (mirrors .chip.c-main in reference/mockup.html). The one label that is
+   wanted — NOT a category chip floating over the face. */
+#hero.rd-hero .rd-chip {
+  position: absolute;
+  font-family: var(--mono) !important;
+  font-size: 11.5px;
+  line-height: 1.3;
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: rd-chip .4s 1.7s forwards;
+}
+#hero.rd-hero .rd-chip-main {
+  left: 8%;
+  top: 6%;
+}
+@keyframes rd-chip {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* --- reduced motion: render final states, no animation --- */
 @media (prefers-reduced-motion: reduce) {
   #hero.rd-hero .rd-box { stroke-dashoffset: 0; animation: none; }
   #hero.rd-hero .rd-fill { width: 98% !important; transition: none; }
   #hero.rd-hero .rd-dot { animation: none; }
   #hero.rd-hero .rd-btn { transition: none; }
+  #hero.rd-hero .rd-chip { opacity: 1; transform: none; animation: none; }
 }
