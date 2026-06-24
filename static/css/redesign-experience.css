@@ -1,0 +1,113 @@
+/* =====================================================================
+   Redesign — Experience cards (Phase 4b)
+   Scoped under #experience.rd-experience. Paper surface; one card per role
+   on --card with a mono accent date+company tag. Tokens from
+   redesign-foundations.css.
+   ===================================================================== */
+
+#experience.rd-experience {
+  padding: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--line) .9px, transparent .9px);
+  background-size: 26px 26px;
+}
+
+#experience.rd-experience .rd-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 28px 70px;
+}
+
+/* section eyebrow + title */
+#experience.rd-experience .rd-sec-eye {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+#experience.rd-experience .rd-br { color: var(--accent); }
+#experience.rd-experience .rd-sec-title {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 30px);
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin: 0 0 26px;
+}
+
+/* cards */
+#experience.rd-experience .rd-xcards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 760px;
+}
+#experience.rd-experience .rd-xcard {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+#experience.rd-experience .rd-xtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+#experience.rd-experience .rd-xrole {
+  font-family: var(--disp) !important;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0;
+}
+#experience.rd-experience .rd-xwhen {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  padding: 3px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#experience.rd-experience .rd-xco {
+  font-family: var(--mono) !important;
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-bottom: 14px;
+}
+#experience.rd-experience .rd-xbody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+#experience.rd-experience .rd-xbody p { margin: 0 0 10px; }
+#experience.rd-experience .rd-xbody p:last-child { margin-bottom: 0; }
+#experience.rd-experience .rd-xbody ul { margin: 0; padding-left: 1.15em; }
+#experience.rd-experience .rd-xbody li { margin: 4px 0; }
+
+/* reveal on scroll (only with JS; no-JS keeps content visible) */
+html.rd-js #experience.rd-experience .rd-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s, transform .7s;
+}
+html.rd-js #experience.rd-experience .rd-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.rd-js #experience.rd-experience .rd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
