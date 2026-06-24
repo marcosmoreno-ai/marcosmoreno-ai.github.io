@@ -1,6 +1,5 @@
 {{ if .Site.Params.about.enable | default false }}
 {{- $about := .Site.Language.Params.about | default .Site.Params.about -}}
-{{- $skills := $about.skills | default .Site.Params.about.skills -}}
 <section id="about" class="py-0 py-sm-5">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">{{ $about.title | default (i18n "about") }}</h3>
@@ -14,32 +13,6 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ $about.content | markdownify }}
-
-                {{ if $skills.enable }}
-                <div class="skills-section mt-4">
-                    {{ if $skills.title }}<p class="skills-title">{{ $skills.title }}</p>{{ end }}
-                    {{ if $skills.skillGroups }}
-                    <div class="skill-groups">
-                        {{ range $skills.skillGroups }}
-                        <div class="skill-group">
-                            <span class="skill-group-name">{{ .name }}</span>
-                            <div class="skill-chips">
-                                {{ range .items }}
-                                <span class="skill-chip">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-                    {{ else if $skills.items }}
-                    <ul>
-                        {{ range $skills.items }}
-                        <li>{{ . | markdownify }}</li>
-                        {{ end }}
-                    </ul>
-                    {{ end }}
-                </div>
-                {{ end }}
             </div>
         </div>
     </div>
