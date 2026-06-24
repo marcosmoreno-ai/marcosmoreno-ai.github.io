@@ -6,8 +6,6 @@
       {{ range $m.items }}
       <div class="rd-mcard rd-reveal">
         <span class="rd-corner rd-corner-tl" aria-hidden="true"></span>
-        <span class="rd-corner rd-corner-tr" aria-hidden="true"></span>
-        <span class="rd-corner rd-corner-bl" aria-hidden="true"></span>
         <span class="rd-corner rd-corner-br" aria-hidden="true"></span>
         <div class="rd-mlabel">{{ .label }}</div>
         <div class="rd-mvalue">{{ .pre }}{{ with .accent }}<span class="rd-accent">{{ . }}</span>{{ end }}{{ .post }}</div>

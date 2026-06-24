@@ -43,7 +43,8 @@
   padding: 22px 20px;
 }
 
-/* bracket corners — thin orange L-marks (bounding-box vernacular) */
+/* bracket corners — two diagonal orange L-marks (top-left + bottom-right),
+   mirroring the .rd ::before/::after in reference/mockup.html */
 #metrics.rd-metrics .rd-corner {
   position: absolute;
   width: 9px;
@@ -52,8 +53,6 @@
   pointer-events: none;
 }
 #metrics.rd-metrics .rd-corner-tl { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
-#metrics.rd-metrics .rd-corner-tr { top: 8px; right: 8px; border-left: 0; border-bottom: 0; }
-#metrics.rd-metrics .rd-corner-bl { bottom: 8px; left: 8px; border-right: 0; border-top: 0; }
 #metrics.rd-metrics .rd-corner-br { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
 
 /* --- readout text --- */
