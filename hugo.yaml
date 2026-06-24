@@ -135,6 +135,7 @@ languages:
         items:
           - company: "VRAIA"
             companyUrl: "https://vraia.com/"
+            range: "2020 — presente"
             jobs:
               - name: "AI Tech Lead"
                 date: "oct. 2024 - actualidad"
@@ -175,6 +176,7 @@ languages:
 
           - company: "CFZ Cobots"
             companyUrl: "https://cfzcobots.com/"
+            range: "2019"
             jobs:
               - name: "Computer Vision Engineering Intern"
                 date: "mar. 2019 - may. 2019"
@@ -435,6 +437,7 @@ params:
     items:
       - company: "VRAIA"
         companyUrl: "https://vraia.com/"
+        range: "2020 — present"
         jobs:
           - name: "AI Tech Lead"
             date: "Oct 2024 - Present"
@@ -475,6 +478,7 @@ params:
 
       - company: "CFZ Cobots"
         companyUrl: "https://cfzcobots.com/"
+        range: "2019"
         jobs:
           - name: "Computer Vision Engineering Intern"
             date: "Mar 2019 - May 2019"

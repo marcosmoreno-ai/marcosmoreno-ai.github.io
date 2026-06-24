@@ -1,7 +1,8 @@
 /* =====================================================================
-   Redesign — Experience cards (Phase 4b)
-   Scoped under #experience.rd-experience. Paper surface; one card per role
-   on --card with a mono accent date+company tag. Tokens from
+   Redesign — Experience, grouped by company (Phase 4b)
+   Scoped under #experience.rd-experience. Paper surface; one --card group
+   per company with the company named once + total range, and the roles
+   nested as a vertical timeline (newest on top). Tokens from
    redesign-foundations.css.
    ===================================================================== */
 
@@ -40,19 +41,79 @@
   margin: 0 0 26px;
 }
 
-/* cards */
-#experience.rd-experience .rd-xcards {
+/* company groups */
+#experience.rd-experience .rd-xgroups {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   max-width: 760px;
 }
-#experience.rd-experience .rd-xcard {
+#experience.rd-experience .rd-xgroup {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 26px 28px;
 }
+#experience.rd-experience .rd-xghead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+#experience.rd-experience .rd-xcompany {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin: 0;
+}
+#experience.rd-experience .rd-xrange {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* timeline of roles inside a company */
+#experience.rd-experience .rd-xrole {
+  position: relative;
+  padding-left: 26px;
+  padding-bottom: 26px;
+}
+#experience.rd-experience .rd-xrole:last-child {
+  padding-bottom: 0;
+}
+/* node */
+#experience.rd-experience .rd-xnode {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--ink-3);
+  z-index: 1;
+}
+/* the most recent role (first) marks "current" with an accent node */
+#experience.rd-experience .rd-xtimeline-multi .rd-xrole:first-child .rd-xnode {
+  border-color: var(--accent);
+}
+/* vertical connector joining the roles (only when there is more than one) */
+#experience.rd-experience .rd-xtimeline-multi .rd-xrole:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+
 #experience.rd-experience .rd-xtop {
   display: flex;
   justify-content: space-between;
@@ -61,10 +122,10 @@
   flex-wrap: wrap;
   margin-bottom: 6px;
 }
-#experience.rd-experience .rd-xrole {
+#experience.rd-experience .rd-xrole-name {
   font-family: var(--disp) !important;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   color: var(--ink);
   margin: 0;
@@ -82,7 +143,7 @@
   font-family: var(--mono) !important;
   font-size: 13px;
   color: var(--ink-2);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 #experience.rd-experience .rd-xbody {
   font-size: 15px;

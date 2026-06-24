@@ -5,19 +5,28 @@
     <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> experience <span class="rd-br">]</span></div>
     <h2 class="rd-sec-title">{{ $experience.title | default (i18n "experience") }}</h2>
 
-    <div class="rd-xcards">
+    <div class="rd-xgroups">
       {{ range $experience.items }}
-        {{ $company := .company }}
-        {{ range .jobs }}
-        <article class="rd-xcard rd-reveal">
-          <div class="rd-xtop">
-            <h3 class="rd-xrole">{{ .name }}</h3>
-            <span class="rd-xwhen">{{ .date }} · {{ $company }}</span>
+      <article class="rd-xgroup rd-reveal">
+        <header class="rd-xghead">
+          <h3 class="rd-xcompany">{{ .company }}</h3>
+          {{ with .range }}<span class="rd-xrange">{{ . }}</span>{{ end }}
+        </header>
+
+        <div class="rd-xtimeline{{ if gt (len .jobs) 1 }} rd-xtimeline-multi{{ end }}">
+          {{ range .jobs }}
+          <div class="rd-xrole">
+            <span class="rd-xnode" aria-hidden="true"></span>
+            <div class="rd-xtop">
+              <h4 class="rd-xrole-name">{{ .name }}</h4>
+              <span class="rd-xwhen">{{ .date }}</span>
+            </div>
+            {{ with .info.content }}<div class="rd-xco">{{ . }}</div>{{ end }}
+            <div class="rd-xbody">{{ .content | markdownify }}</div>
           </div>
-          {{ with .info.content }}<div class="rd-xco">{{ . }}</div>{{ end }}
-          <div class="rd-xbody">{{ .content | markdownify }}</div>
-        </article>
-        {{ end }}
+          {{ end }}
+        </div>
+      </article>
       {{ end }}
     </div>
   </div>
