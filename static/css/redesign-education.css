@@ -1,0 +1,141 @@
+/* =====================================================================
+   Redesign — Education (Phase: education)
+   Scoped under #education.rd-education. Same card language as Experience:
+   paper surface, --card group with institution + range header, degree
+   title, and the thesis (TFG) as the description. Tokens from
+   redesign-foundations.css.
+   ===================================================================== */
+
+#education.rd-education {
+  padding: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--line) .9px, transparent .9px);
+  background-size: 26px 26px;
+}
+
+#education.rd-education .rd-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 28px 70px;
+}
+
+/* section eyebrow + title */
+#education.rd-education .rd-sec-eye {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+#education.rd-education .rd-br { color: var(--accent); }
+#education.rd-education .rd-sec-title {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 30px);
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin: 0 0 26px;
+}
+
+/* cards */
+#education.rd-education .rd-edu-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 760px;
+}
+#education.rd-education .rd-edu-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+#education.rd-education .rd-xtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+#education.rd-education .rd-edu-school {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin: 0;
+}
+#education.rd-education .rd-xwhen {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  padding: 3px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#education.rd-education .rd-edu-degree {
+  font-family: var(--disp) !important;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+#education.rd-education .rd-edu-gpa {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+}
+#education.rd-education .rd-xbody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+#education.rd-education .rd-xbody p { margin: 0 0 10px; }
+#education.rd-education .rd-xbody p:last-child { margin-bottom: 0; }
+#education.rd-education .rd-xbody ul { margin: 0; padding-left: 1.15em; }
+#education.rd-education .rd-xbody li { margin: 4px 0; }
+
+/* thesis / featured link — the one real link in this section */
+#education.rd-education .rd-edu-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--mono) !important;
+  font-size: 13px;
+  color: var(--accent-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 1px;
+  transition: border-color .15s;
+}
+#education.rd-education .rd-edu-link:hover {
+  border-color: var(--accent);
+}
+#education.rd-education .rd-edu-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* reveal on scroll (only with JS; no-JS keeps content visible) */
+html.rd-js #education.rd-education .rd-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s, transform .7s;
+}
+html.rd-js #education.rd-education .rd-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.rd-js #education.rd-education .rd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

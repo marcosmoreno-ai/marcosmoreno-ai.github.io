@@ -205,9 +205,9 @@ languages:
               - Servidor Flask en Python para servir el modelo como API.
               - App Android en Java que consumía las predicciones y alertaba al usuario mediante vibración y sonido.
             featuredLink:
-              enable: false
+              enable: true
               name: "Ver proyecto"
-              url: "https://example.com"
+              url: "https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view"
 
       # Achievements
       achievements:
@@ -238,20 +238,11 @@ languages:
 
       # Projects
       projects:
-        enable: true
-        items:
-          - title: Asistente Visual para Peatones Ciegos
-            content: Sistema de IA de extremo a extremo para ayudar a personas con discapacidad visual a cruzar pasos de peatones de forma segura, bajo cualquier condición de iluminación. Construí un dataset personalizado de 1.010 imágenes, fine-tuné YOLOv3 alcanzando un 92% de recall y 75% IoU. Servido mediante API Flask, consumido por una app Android con retroalimentación háptica y de audio. Validado en pruebas reales en calle con un 100% de acierto.
-            image: /images/projects/mem-port.jpg
-            badges:
-              - "YOLOv3"
-              - "Flask"
-              - "Android"
-              - "Python"
-              - "Darknet"
-            links:
-              - icon: fas fa-file-pdf
-                url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
+        # Disabled for now: the only entry was the degree thesis (TFG), which now
+        # lives in the Education section. Real personal projects will be added in
+        # the Projects redesign phase.
+        enable: false
+        items: []
 
       # Contact
       contact:
@@ -328,7 +319,7 @@ params:
       disableAbout: false
       disableExperience: false
       disableEducation: false
-      disableProjects: false
+      disableProjects: true
       disableAchievements: false
       disableContact: false
 
@@ -507,9 +498,9 @@ params:
           - Flask server in Python to serve the model as an API.
           - Android app in Java consuming predictions and alerting the user via haptic and audio feedback.
         featuredLink:
-          enable: false
+          enable: true
           name: "View project"
-          url: "https://example.com"
+          url: "https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view"
 
   # Achievements
   achievements:
@@ -540,20 +531,11 @@ params:
 
   # Projects
   projects:
-    enable: true
-    items:
-      - title: Visual Assistant for Blind Pedestrians
-        content: End-to-end AI system to help visually impaired people cross pedestrian crossings safely, under any lighting condition. Built a custom dataset of 1,010 images, fine-tuned YOLOv3 reaching 92% recall and 75% IoU. Served via Flask API, consumed by an Android app with haptic and audio feedback. Validated in real-world tests with 100% accuracy.
-        image: /images/projects/mem-port.jpg
-        badges:
-          - "YOLOv3"
-          - "Flask"
-          - "Android"
-          - "Python"
-          - "Darknet"
-        links:
-          - icon: fas fa-file-pdf
-            url: https://drive.google.com/file/d/15BD01p0qNRsKOUDs_OwEkzabREqlK3QD/view
+    # Disabled for now: the only entry was the degree thesis (TFG), which now
+    # lives in the Education section. Real personal projects will be added in
+    # the Projects redesign phase.
+    enable: false
+    items: []
 
   # Contact
   contact:

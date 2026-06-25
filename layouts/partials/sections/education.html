@@ -1,67 +1,41 @@
 {{ if .Site.Params.education.enable | default false }}
 {{- $education := .Site.Language.Params.education | default .Site.Params.education -}}
-<section id="education" class="py-5">
-    <div class="container">
-        <h3 class="text-center">{{ $education.title | default .Site.Params.education.title | default (i18n "education") }}</h3>
-        <div class="row justify-content-center py-5">
-            {{ $indexMenu := .Site.Params.education.index }}
-            {{ range $index, $element := $education.items | default .Site.Params.education.items }}
-            <div class="col-12 p-0">
-                <div class="row row align-items-center justify-content-center m-1 mb-4">
-                    {{ if $indexMenu }}
-                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
-                        <div class="py-2">
-                            <span class="index shadow-lg">
-                                {{ add $index 1 }}
-                            </span>
-                        </div>
-                    </div>
-                    {{ end }}
+<section id="education" class="rd-education">
+  <div class="rd-wrap">
+    <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> education <span class="rd-br">]</span></div>
+    <h2 class="rd-sec-title">{{ $education.title | default (i18n "education") }}</h2>
 
-                    <div class="col-md-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="float-end">
-                                    <small>{{ .date }}</small>
-                                </div>
-                                <h5 class="card-title">{{ .title }}</h5>
-                                
-                                {{ if .school.url }}
-                                <a href="{{ .school.url }}" target="_blank">
-                                    <h6>
-                                    {{ .school.name }}
-                                    </h6>
-                                </a>
-                                {{ else }}
-                                {{ .school.name }}
-                                {{ end }}
-
-                                {{ if .GPA }}
-                                <div class="py-1">
-                                    GPA:
-                                    <i>
-                                        <small>{{ .GPA }}</small>
-                                    </i> 
-                                </div>
-                                {{ end }}
-                                <div class="py-1 education-content">
-                                    {{ .content | markdownify}}
-                                </div>
-
-                                {{ if .featuredLink.enable }}
-                                <div class="py-1">
-                                    <a href="{{ .featuredLink.url }}" class="btn">
-                                        {{ .featuredLink.name | default "Featured" }}
-                                    </a>
-                                </div>
-                                {{ end }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{ end }}
+    <div class="rd-edu-cards">
+      {{ range $education.items }}
+      <article class="rd-edu-card rd-reveal">
+        <div class="rd-xtop">
+          <h3 class="rd-edu-school">{{ .school.name }}</h3>
+          <span class="rd-xwhen">{{ .date }}</span>
         </div>
+        <div class="rd-edu-degree">{{ .title }}</div>
+        {{ if .GPA }}<div class="rd-edu-gpa">GPA: {{ .GPA }}</div>{{ end }}
+        {{ with .content }}<div class="rd-xbody">{{ . | markdownify }}</div>{{ end }}
+        {{ if .featuredLink.enable }}
+        <a class="rd-edu-link" href="{{ .featuredLink.url }}" target="_blank" rel="noopener">
+          {{ .featuredLink.name | default "Featured" }} <span aria-hidden="true">→</span>
+        </a>
+        {{ end }}
+      </article>
+      {{ end }}
     </div>
+  </div>
+
+  <script>
+    (function () {
+      var els = [].slice.call(document.querySelectorAll('#education .rd-reveal'));
+      if (!els.length) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: .15 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 </section>
 {{ end }}
