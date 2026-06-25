@@ -15,6 +15,11 @@
         <div class="rd-edu-degree">{{ .title }}</div>
         {{ if .GPA }}<div class="rd-edu-gpa">GPA: {{ .GPA }}</div>{{ end }}
         {{ with .content }}<div class="rd-xbody">{{ . | markdownify }}</div>{{ end }}
+        {{ with .badges }}
+        <div class="rd-edu-pills">
+          {{ range . }}<span class="rd-pill">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
         {{ if .featuredLink.enable }}
         <a class="rd-edu-link" href="{{ .featuredLink.url }}" target="_blank" rel="noopener">
           {{ .featuredLink.name | default "Featured" }} <span aria-hidden="true">→</span>

@@ -102,6 +102,25 @@
 #education.rd-education .rd-xbody ul { margin: 0; padding-left: 1.15em; }
 #education.rd-education .rd-xbody li { margin: 4px 0; }
 
+/* thesis tech stack — mono pills inside the card (project's technologies).
+   Neutral only: these are the thesis stack, not production tools, so no
+   accent pills here. */
+#education.rd-education .rd-edu-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+#education.rd-education .rd-pill {
+  font-family: var(--mono) !important;
+  font-size: 13px;
+  color: var(--ink-2);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 7px;
+}
+
 /* thesis / featured link — the one real link in this section */
 #education.rd-education .rd-edu-link {
   display: inline-block;

@@ -204,6 +204,12 @@ languages:
               - Entrenamiento de YOLOv3 sobre Darknet con GPU Nvidia Quadro P6000, alcanzando un 92% de recall y 75% IoU en el conjunto de test.
               - Servidor Flask en Python para servir el modelo como API.
               - App Android en Java que consumía las predicciones y alertaba al usuario mediante vibración y sonido.
+            badges:
+              - "YOLOv3"
+              - "Flask"
+              - "Android"
+              - "Python"
+              - "Darknet"
             featuredLink:
               enable: true
               name: "Ver proyecto"
@@ -497,6 +503,12 @@ params:
           - Fine-tuned YOLOv3 on Darknet using an Nvidia Quadro P6000 GPU, reaching 92% recall and 75% IoU on the test set.
           - Flask server in Python to serve the model as an API.
           - Android app in Java consuming predictions and alerting the user via haptic and audio feedback.
+        badges:
+          - "YOLOv3"
+          - "Flask"
+          - "Android"
+          - "Python"
+          - "Darknet"
         featuredLink:
           enable: true
           name: "View project"
