@@ -1,48 +1,43 @@
 {{ if .Site.Params.contact.enable | default false }}
 {{- $contact := .Site.Language.Params.contact | default .Site.Params.contact -}}
-<section id="contact" class="py-5">
-    <div class="container">
-        <h3 class="text-center">{{ $contact.title | default (i18n "contact") }}</h3>
-        <div class="px-0 px-md-5 px-lg-5">
-            <div class="row justify-content-center px-md-5">
-                <div class="col-md-8 py-3">
-                    <div class="text-center">
-                        {{ $contact.content | emojify | markdownify }}
-                    </div>
-                    {{ if .Site.Params.contact.formspree.enable | default false }}
-                    <div class="row justify-content-center">
-                        <form id="contact-form" action="https://formspree.io/f/{{ .Site.Params.contact.formspree.formId }}" onsubmit="handleFormspreeSubmit(event)" method="POST" class="col-md-7">
-                            <div class="form-group pt-3">
-                                <input type="email" class="form-control"  name="email" required="true" placeholder='{{ .Site.Params.contact.formspree.emailCaption | emojify | default (i18n "contact_email_placeholder") }}'>
-                            </div>
-                            <div class="form-group pt-3">
-                                <textarea class="form-control" name="message" required="true" placeholder='{{ .Site.Params.contact.formspree.messageCaption | emojify | default (i18n "contact_message_placeholder") }}' rows="{{ .Site.Params.contact.formspree.messageRows | default 3 }}"></textarea>
-                            </div>
-                            <div class="form-group text-center pt-3">
-                                <button type="submit" class="btn">{{ $contact.btnName | default .Site.Params.contact.btnName | default (i18n "contact") }}</button>
-                            </div>
-                        </form>
-                    </div>
-                    {{ else if or (.Site.Params.contact.email)  (.Site.Params.contact.btnLink) }}
-                    <div class="text-center pt-3">
-                        <a 
-                            href='{{ if .Site.Params.contact.btnLink }}
-                                    {{ .Site.Params.contact.btnLink | default "#" }}
-                                  {{ else }}
-                                    mailto:{{ .Site.Params.contact.email }}
-                                  {{ end }}'
-                            target="_blank"
-                            class="btn"
-                        >
-                            {{ $contact.btnName | default .Site.Params.contact.btnName | default (i18n "contact") }}
-                        </a>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
+{{- $hero := .Site.Language.Params.hero | default .Site.Params.hero -}}
+{{- $mail := $contact.btnLink | default (printf "mailto:%s" $contact.email) -}}
+<section id="contact" class="rd-contact">
+  <div class="rd-wrap">
+    <div class="rd-contact-band rd-reveal">
+      <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> contact <span class="rd-br">]</span></div>
+      {{ with $contact.title }}<h2 class="rd-contact-title">{{ . }}</h2>{{ end }}
+      {{ with $contact.content }}<p class="rd-contact-line">{{ . | emojify }}</p>{{ end }}
+
+      <a class="rd-contact-cta" href="{{ $mail }}">
+        <span aria-hidden="true">→</span> {{ $contact.btnName | default .Site.Params.contact.btnName | default (i18n "contact") }}
+      </a>
+
+      {{ with $hero.socialLinks.fontAwesomeIcons }}
+      {{ $labels := dict "fa-github" "GitHub" "fa-linkedin" "LinkedIn" }}
+      <div class="rd-contact-social">
+        {{ range . }}
+        {{ $key := .icon | replaceRE ".*?(fa-[a-z-]+).*" "$1" }}
+        {{ $label := index $labels $key | default ($key | replaceRE "fa-" "" | title) }}
+        <a class="rd-contact-soc" href="{{ .url }}" target="_blank" rel="noopener"><i class="{{ .icon }}" aria-hidden="true"></i> {{ $label }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
-    <div id="contact-form-status"></div>
+  </div>
+
+  <script>
+    (function () {
+      var els = [].slice.call(document.querySelectorAll('#contact .rd-reveal'));
+      if (!els.length) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: .2 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 </section>
 {{ end }}
 

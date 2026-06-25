@@ -282,6 +282,7 @@ languages:
       # Contact
       contact:
         enable: true
+        title: "Construyamos algo que llegue a producción"
         content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!
         btnName: Escríbeme
         btnLink: mailto:marcosmoreno.of@gmail.com
@@ -610,6 +611,7 @@ params:
   # Contact
   contact:
     enable: true
+    title: "Let's build something that ships"
     content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
     btnName: Mail me
     btnLink: mailto:marcosmoreno.of@gmail.com
