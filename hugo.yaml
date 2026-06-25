@@ -246,11 +246,27 @@ languages:
 
       # Projects
       projects:
-        # Disabled for now: the only entry was the degree thesis (TFG), which now
-        # lives in the Education section. Real personal projects will be added in
-        # the Projects redesign phase.
-        enable: false
-        items: []
+        enable: true
+        items:
+          - title: "Este portfolio"
+            content: "El sitio en el que estás. Un sitio Hugo sin dependencia de theme: aplané el theme original (un submódulo de git) en mis propios layouts y construí un sistema de diseño documentado —el motivo de «detección»— mantenido como una skill de Claude Code. Se despliega solo en GitHub Pages mediante un pipeline de GitHub Actions."
+            badges:
+              - "Hugo"
+              - "GitHub Actions"
+              - "GitHub Pages"
+            repo: "https://github.com/marcosmoreno-ai/marcosmoreno-ai.github.io"
+            repoLabel: "Ver repo"
+          - title: "Arachne"
+            status: "in progress"
+            content: "Un agente text-to-SQL sobre LangGraph: convierte preguntas en lenguaje natural en SQL ejecutable contra SQLite, con verificación y auto-corrección. Lo interesante no es el LLM —es una pieza pequeña— sino el control flow a su alrededor: un guard SELECT-only (sin queries destructivas), un repair loop acotado y evaluación por execution accuracy contra el dev set de Spider, con observabilidad vía LangSmith. En fase temprana: el esqueleto del grafo ya compila; el loop completo y las evals son el diseño previsto, todavía sin terminar."
+            badges:
+              - "LangGraph"
+              - "LangChain"
+              - "LangSmith"
+              - "OpenAI"
+              - "Pydantic"
+              - "SQLite"
+              - "uv"
 
       # Contact
       contact:
@@ -327,7 +343,7 @@ params:
       disableAbout: false
       disableExperience: false
       disableEducation: false
-      disableProjects: true
+      disableProjects: false
       disableAchievements: false
       disableContact: false
 
@@ -547,11 +563,27 @@ params:
 
   # Projects
   projects:
-    # Disabled for now: the only entry was the degree thesis (TFG), which now
-    # lives in the Education section. Real personal projects will be added in
-    # the Projects redesign phase.
-    enable: false
-    items: []
+    enable: true
+    items:
+      - title: "This portfolio"
+        content: "The site you're on. A Hugo site with no theme dependency: I flattened the original submodule theme into my own layouts, then built a documented design system —the 'detection' motif— maintained as a Claude Code skill. It ships automatically to GitHub Pages through a GitHub Actions pipeline."
+        badges:
+          - "Hugo"
+          - "GitHub Actions"
+          - "GitHub Pages"
+        repo: "https://github.com/marcosmoreno-ai/marcosmoreno-ai.github.io"
+        repoLabel: "View repo"
+      - title: "Arachne"
+        status: "in progress"
+        content: "A text-to-SQL agent built on LangGraph: it turns natural-language questions into executable SQL against SQLite, with verification and self-correction. The interesting part isn't the LLM —it's a small piece— it's the control flow around it: a SELECT-only guard (no destructive queries), a bounded repair loop, and evaluation by execution accuracy on the Spider dev set, with observability through LangSmith. Early stage: the graph skeleton compiles; the full loop and the evals are the intended design, not finished yet."
+        badges:
+          - "LangGraph"
+          - "LangChain"
+          - "LangSmith"
+          - "OpenAI"
+          - "Pydantic"
+          - "SQLite"
+          - "uv"
 
   # Contact
   contact:
