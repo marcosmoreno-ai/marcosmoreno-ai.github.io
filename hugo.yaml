@@ -256,10 +256,6 @@ languages:
               - "Hugo"
               - "GitHub Actions"
               - "GitHub Pages"
-              - "HTML"
-              - "CSS"
-              - "JavaScript"
-              - "SVG"
               - "Claude Code"
               - "Agent Skills"
             links:
@@ -585,10 +581,6 @@ params:
           - "Hugo"
           - "GitHub Actions"
           - "GitHub Pages"
-          - "HTML"
-          - "CSS"
-          - "JavaScript"
-          - "SVG"
           - "Claude Code"
           - "Agent Skills"
         links:
