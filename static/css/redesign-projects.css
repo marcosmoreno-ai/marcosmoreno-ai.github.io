@@ -90,6 +90,10 @@
   border-radius: 50%;
   background: var(--ink-3);
 }
+/* 'live' status: accent dot signals shipped/active vs the neutral wip dot */
+#projects.rd-projects .rd-proj-status-live .rd-proj-dot {
+  background: var(--accent);
+}
 
 #projects.rd-projects .rd-proj-body {
   font-size: 15px;
@@ -115,10 +119,15 @@
   border-radius: 7px;
 }
 
-/* repo link — the one real link per card */
+/* repo / site links */
+#projects.rd-projects .rd-proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 16px;
+}
 #projects.rd-projects .rd-proj-link {
   display: inline-block;
-  margin-top: 16px;
   font-family: var(--mono) !important;
   font-size: 13px;
   color: var(--accent-ink) !important;   /* beat theme '#projects a { color: ... !important }' */

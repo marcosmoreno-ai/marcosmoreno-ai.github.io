@@ -10,7 +10,7 @@
       <article class="rd-proj-card rd-reveal">
         <div class="rd-xtop">
           <h3 class="rd-proj-title">{{ .title }}</h3>
-          {{ with .status }}<span class="rd-proj-status"><span class="rd-proj-dot" aria-hidden="true"></span>{{ . }}</span>{{ end }}
+          {{ if .status }}<span class="rd-proj-status{{ if .statusLive }} rd-proj-status-live{{ end }}"><span class="rd-proj-dot" aria-hidden="true"></span>{{ .status }}</span>{{ end }}
         </div>
         {{ with .content }}<div class="rd-proj-body">{{ . | markdownify }}</div>{{ end }}
         {{ with .badges }}
@@ -18,10 +18,12 @@
           {{ range . }}<span class="rd-pill">{{ . }}</span>{{ end }}
         </div>
         {{ end }}
-        {{ if .repo }}
-        <a class="rd-proj-link" href="{{ .repo }}" target="_blank" rel="noopener">
-          {{ .repoLabel | default "Repo" }} <span aria-hidden="true">→</span>
-        </a>
+        {{ with .links }}
+        <div class="rd-proj-links">
+          {{ range . }}
+          <a class="rd-proj-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .label }} <span aria-hidden="true">→</span></a>
+          {{ end }}
+        </div>
         {{ end }}
       </article>
       {{ end }}
