@@ -210,6 +210,8 @@ languages:
               - "Android"
               - "Python"
               - "Darknet"
+              - "Java"
+              - "C"
             featuredLink:
               enable: true
               name: "Ver proyecto"
@@ -509,6 +511,8 @@ params:
           - "Android"
           - "Python"
           - "Darknet"
+          - "Java"
+          - "C"
         featuredLink:
           enable: true
           name: "View project"
