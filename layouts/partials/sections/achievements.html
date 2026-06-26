@@ -1,47 +1,34 @@
 {{ if .Site.Params.achievements.enable | default false }}
 {{- $achievements := .Site.Language.Params.achievements | default .Site.Params.achievements -}}
-<section id="achievements" class="py-5">
-    <div class="container">
-        <h3 class="text-center">{{ $achievements.title | default .Site.Params.achievements.title | default (i18n "achievements") }}</h3>
-        <div class="px-0 px-md-5 px-lg-5">
-            <div class="row justify-content-center px-3 px-md-5 px-lg-5">
-                {{ range $achievements.items | default .Site.Params.achievements.items }}
-                {{ if .url }}
-                <div class="col-lg-4 col-md-6 my-3">
-                    <a class="card my-3 h-100 p-3" href="{{ .url }}" title="{{ .title }}" target="_blank">
-                        {{if .image }}
-                            <div class="card-head">
-                                <img class="card-img-top" src="{{ .image }}">
-                            </div>
-                        {{ end }}
-                        <div class="card-body bg-transparent">
-                            <h5 class="card-title bg-transparent">{{ .title }}</h5>
-                            <div class="card-text secondary-font">
-                                {{ .content }}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                {{ else }}
-                <div class="col-lg-4 col-md-6 my-3">
-                    <div class="card my-3 h-100 p-3" title="{{ .title }}">
-                        {{if .image }}
-                            <div class="card-head">
-                                <img class="card-img-top" src="{{ .image }}">
-                            </div>
-                        {{ end }}
-                        <div class="card-body bg-transparent">
-                            <h5 class="card-title bg-transparent">{{ .title }}</h5>
-                            <div class="card-text secondary-font">
-                                {{ .content }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-                {{ end }}
-            </div>
-        </div>
+{{- $credLabel := cond (eq .Site.Language.Lang "es") "Ver credencial" "View credential" -}}
+<section id="achievements" class="rd-achievements">
+  <div class="rd-wrap">
+    <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> achievements <span class="rd-br">]</span></div>
+    <h2 class="rd-sec-title">{{ $achievements.title | default (i18n "achievements") }}</h2>
+
+    <div class="rd-ach-cards">
+      {{ range $achievements.items }}
+      <article class="rd-ach-card rd-reveal">
+        <h3 class="rd-ach-title">{{ .title }}</h3>
+        {{ with .meta }}<div class="rd-ach-meta">{{ . }}</div>{{ end }}
+        {{ with .content }}<div class="rd-ach-body">{{ . }}</div>{{ end }}
+        {{ with .url }}<a class="rd-ach-link" href="{{ . }}" target="_blank" rel="noopener">{{ $credLabel }} <span aria-hidden="true">→</span></a>{{ end }}
+      </article>
+      {{ end }}
     </div>
+  </div>
+
+  <script>
+    (function () {
+      var els = [].slice.call(document.querySelectorAll('#achievements .rd-reveal'));
+      if (!els.length) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: .12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 </section>
 {{ end }}
