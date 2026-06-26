@@ -63,7 +63,7 @@ languages:
             post: ""
             sub: "@ VRAIA · desde 2024"
           - label: "team"
-            pre: "8 personas"
+            pre: "5 personas"
             accent: ""
             post: ""
             sub: "computer vision + ai agents"
@@ -140,9 +140,9 @@ languages:
               - name: "AI Tech Lead"
                 date: "oct. 2024 - actualidad"
                 info:
-                  content: Liderando equipos de ML, Agentes y RPA
+                  content: Liderando un equipo de IA de 5 personas (visión y agentes)
                 content: |
-                  Liderando dos equipos de IA en paralelo: un equipo de Machine Learning centrado en Visión Artificial (2 etiquetadores, un matemático con doctorado, un ingeniero junior de ML) y un equipo de Agentes de IA y RPA (senior fullstack, backend, frontend y un especialista en agentes) — 8 personas con perfiles y disciplinas muy distintas.
+                  Liderando un equipo de IA directo de 5 personas entre visión por computador y agentes — 2 etiquetadores, un ingeniero junior de IA, un ingeniero senior de IA y un desarrollador de agentes — además de coordinación transversal con IT en la app de agentes/RPA.
 
                   - Supervisión técnica de múltiples sistemas de visión artificial en producción con más de 30 modelos de deep learning (CNNs y Vision Transformers) desplegados en distintos proyectos.
                   - Gestión de equipos y mentoría de perfiles junior y senior.
@@ -222,7 +222,7 @@ languages:
         enable: true
         items:
           - title: 6 Años Creciendo en IA en Producción
-            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. Desde construir pipelines de datos hasta liderar 8 personas en dos equipos de IA en paralelo.
+            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. De construir pipelines de datos a liderar un equipo de IA de 5 personas entre visión por computador y agentes, coordinando de forma transversal con IT.
             image: /images/achievements/tree.png
           - title: "C1 Advanced (CAE)"
             meta: "Cambridge · 2021"
@@ -393,7 +393,7 @@ params:
         post: ""
         sub: "@ VRAIA · since 2024"
       - label: "team"
-        pre: "8 people"
+        pre: "5 people"
         accent: ""
         post: ""
         sub: "computer vision + ai agents"
@@ -470,9 +470,9 @@ params:
           - name: "AI Tech Lead"
             date: "Oct 2024 - Present"
             info:
-              content: Leading ML, Agents and RPA teams
+              content: Leading a 5-person AI team (computer vision and agents)
             content: |
-              Leading two parallel AI teams: a Machine Learning team focused on Computer Vision (2 labelers, a PhD mathematician, a junior ML engineer) and an AI Agents & RPA team (senior fullstack, backend, frontend and an agent specialist) — 8 people across very different profiles and disciplines.
+              Leading a direct 5-person AI team across computer vision and AI agents — 2 labelers, a junior AI engineer, a senior AI engineer and an agents developer — plus cross-team coordination with IT on the agents/RPA app.
 
               - Technical oversight of multiple production computer vision systems with 30+ deep learning models (CNNs and Vision Transformers) deployed across different projects.
               - Team management and mentoring across junior and senior profiles.
@@ -552,7 +552,7 @@ params:
     enable: true
     items:
       - title: 6 Years Growing in Production AI
-        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading 8 people across two parallel AI teams.
+        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading a 5-person AI team across computer vision and AI agents, coordinating cross-team with IT.
         image: /images/achievements/tree.png
       - title: "C1 Advanced (CAE)"
         meta: "Cambridge · 2021"
