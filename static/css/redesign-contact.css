@@ -83,30 +83,37 @@
   outline-offset: 3px;
 }
 
-/* secondary, muted real social links (not accent) */
+/* secondary real social links — readable and clickable, but still not accent
+   so the orange mail CTA keeps the focus */
 #contact.rd-contact .rd-contact-social {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 22px;
-  margin-top: 26px;
+  gap: 10px;
+  margin-top: 28px;
 }
 #contact.rd-contact .rd-contact-soc {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: var(--mono) !important;
-  font-size: 13px;
-  color: #9aa0a6 !important;
+  font-size: 14.5px;
+  color: #c4c9cf !important;
   text-decoration: none;
-  transition: color .15s;
+  padding: 9px 14px;
+  border-radius: 8px;
+  transition: color .15s, background .15s;
+}
+#contact.rd-contact .rd-contact-soc i {
+  font-size: 16px;
 }
 #contact.rd-contact .rd-contact-soc:hover {
-  color: var(--paper) !important;
+  color: #fff !important;
+  background: rgba(255, 255, 255, .07);
 }
 #contact.rd-contact .rd-contact-soc:focus-visible {
   outline: 2px solid var(--paper);
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
 
 /* reveal on scroll (only with JS; no-JS keeps content visible) */
