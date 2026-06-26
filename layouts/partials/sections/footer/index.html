@@ -1,10 +1,7 @@
-<footer>
-    <!-- Recent blog posts -->
-    {{- partial "sections/footer/recentBlogPosts.html" . -}}
-
-    <!-- Social Icons -->
-    {{- partial "sections/footer/socialNetwork.html" . -}}
-
-    <!-- Copyright -->
-    {{- partial "sections/footer/copyright.html" . -}}
+<footer class="rd-footer">
+  <div class="rd-footer-in">
+    <span class="rd-footer-c">&copy; {{ now.Format "2006" }} Marcos Moreno</span>
+    <span class="rd-footer-sep" aria-hidden="true">·</span>
+    <a class="rd-footer-link" href="https://github.com/marcosmoreno-ai/marcosmoreno-ai.github.io" target="_blank" rel="noopener">source <span aria-hidden="true">↗</span></a>
+  </div>
 </footer>
