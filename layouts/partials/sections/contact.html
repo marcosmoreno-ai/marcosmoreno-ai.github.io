@@ -6,7 +6,7 @@
   <div class="rd-wrap">
     <div class="rd-contact-band rd-reveal">
       <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> contact <span class="rd-br">]</span></div>
-      {{ with $contact.title }}<h2 class="rd-contact-title">{{ . }}</h2>{{ end }}
+      {{ with $contact.heading }}<h2 class="rd-contact-title">{{ . }}</h2>{{ end }}
       {{ with $contact.content }}<p class="rd-contact-line">{{ . | emojify }}</p>{{ end }}
 
       <a class="rd-contact-cta" href="{{ $mail }}">
