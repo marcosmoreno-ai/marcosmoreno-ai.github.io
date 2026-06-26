@@ -30,14 +30,14 @@
   grid-template-columns: 1.05fr .95fr;
   gap: 48px;
   align-items: center;
-  padding: 72px 0 56px;
+  /* horizontal padding comes from .rd-wrap (28px); vertical from the unified
+     rhythm rule — so the hero matches every other section's side margins */
 }
 
 @media (max-width: 860px) {
   #hero.rd-hero .rd-hero-grid {
     grid-template-columns: 1fr;
     gap: 36px;
-    padding: 48px 0 40px;
   }
 }
 
