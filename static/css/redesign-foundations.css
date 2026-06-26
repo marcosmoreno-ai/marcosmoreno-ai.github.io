@@ -60,7 +60,7 @@
    between any pair of sections is the same (= 2 × --rd-sec-pad) and tighter
    than the original uneven theme spacing. Targets the element that carries
    each section's vertical padding; horizontal gutters are left untouched. */
-:root { --rd-sec-pad: 40px; }
+:root { --rd-sec-pad: 24px; }
 #hero.rd-hero .rd-hero-grid,
 #metrics.rd-metrics .rd-metrics-grid,
 #about.rd-about .rd-wrap,
