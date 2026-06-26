@@ -54,3 +54,22 @@
     transition: none !important;
   }
 }
+
+/* --- Unified vertical rhythm ---
+   One identical top/bottom padding for every redesign section, so the gap
+   between any pair of sections is the same (= 2 × --rd-sec-pad) and tighter
+   than the original uneven theme spacing. Targets the element that carries
+   each section's vertical padding; horizontal gutters are left untouched. */
+:root { --rd-sec-pad: 40px; }
+#hero.rd-hero .rd-hero-grid,
+#metrics.rd-metrics .rd-metrics-grid,
+#about.rd-about .rd-wrap,
+#skills.rd-skills .rd-wrap,
+#experience.rd-experience .rd-wrap,
+#education.rd-education .rd-wrap,
+#projects.rd-projects .rd-wrap,
+#achievements.rd-achievements .rd-wrap,
+#contact.rd-contact .rd-wrap {
+  padding-top: var(--rd-sec-pad) !important;
+  padding-bottom: var(--rd-sec-pad) !important;
+}
