@@ -1,0 +1,36 @@
+{{ if .Site.Params.metrics.enable | default false }}
+{{- $m := .Site.Language.Params.metrics | default .Site.Params.metrics -}}
+<section id="metrics" class="rd-metrics">
+  <div class="rd-wrap">
+    <div class="rd-metrics-grid">
+      {{ range $m.items }}
+      <div class="rd-mcard rd-reveal">
+        <span class="rd-corner rd-corner-tl" aria-hidden="true"></span>
+        <span class="rd-corner rd-corner-br" aria-hidden="true"></span>
+        <div class="rd-mlabel">{{ .label }}</div>
+        <div class="rd-mvalue">{{ .pre }}{{ with .accent }}<span class="rd-accent">{{ . }}</span>{{ end }}{{ .post }}</div>
+        <div class="rd-msub">{{ .sub }}</div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var els = [].slice.call(document.querySelectorAll('#metrics .rd-reveal'));
+      if (!els.length) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: .25 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</section>
+{{ end }}

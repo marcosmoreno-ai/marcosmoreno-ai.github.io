@@ -1,70 +1,70 @@
 {{ if .Site.Params.hero.enable | default false }}
 {{- $hero := .Site.Language.Params.hero | default .Site.Params.hero -}}
-<section id="hero" class="py-5 align-middle">
-    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
-        <div class="row align-items-start">
-            <div class="col-12 col-md-4 image {{ if .Site.Params.animate }}animate{{ end }} text-center mb-4 mb-md-0">
-                <div class="hero-photo-wrapper">
-                    <img src="{{ $hero.image }}"
-                        class="img-fluid hero-photo mx-auto"
-                        alt="{{ .Site.Params.title }} profile image"
-                    >
-                </div>
-            </div>
-            <div class="col-12 col-md-8 content {{ if .Site.Params.animate }}animate{{ end }}" id="primary-font">
-                <span class="subtitle">
-                    {{ $hero.intro }}
-                </span>
-                <h1>
-                    {{ $hero.title }}
-                </h1>
-                <h2>
-                    {{ $hero.subtitle }}
-                </h2>
-                <p class="hero-content">
-                    {{ $hero.content | markdownify }}
-                </p>
-                <div class="row">
-                    <div class="col-auto h-100">
-                        {{ if .Site.Params.hero.button.enable }}
-                        <a href="{{ .Site.Params.hero.button.url }}" class="btn" {{ cond .Site.Params.hero.button.download "download" "" }}
-                          {{ if .Site.Params.hero.button.newPage | default true }}
-                          target="_blank"
-                          {{ end }}>
-                            {{ $hero.button.name | default .Site.Params.hero.button.name }}
-                        </a>
-                        {{ end }}
-                    </div>
-                    <div class="col-auto px-0 h-100">
-                        {{- partial "sections/hero/social.html" . -}}
-                    </div>
-                </div>
-            </div>
+{{- $btn := .Site.Params.hero.button -}}
+<section id="hero" class="rd-hero">
+  <div class="rd-wrap rd-hero-grid">
+
+    <div class="rd-hero-content rd-animate">
+      <div class="rd-eyebrow" aria-hidden="true"><span class="rd-dot"></span> inference: live · model v2026</div>
+
+      <div class="rd-conf" aria-hidden="true">confidence<span class="rd-bar"><span class="rd-fill" id="rd-conf-fill"></span></span><span id="rd-conf-val">0.00</span></div>
+
+      {{ with $hero.intro }}<span class="rd-hero-intro">{{ . }}</span>{{ end }}
+      <h1 class="rd-hero-name">{{ $hero.title }}</h1>
+      <p class="rd-hero-role">{{ $hero.subtitle }} <span class="rd-tag">class: lead</span></p>
+
+      <p class="rd-hero-lead">{{ $hero.content }}</p>
+
+      <div class="rd-cta">
+        {{ if $btn.enable }}
+        <a class="rd-btn rd-btn-primary" href="{{ $btn.url }}"
+           {{ if $btn.download }}download{{ end }}
+           {{ if $btn.newPage }}target="_blank" rel="noopener"{{ end }}>
+          <span aria-hidden="true">↓</span> {{ $hero.button.name | default $btn.name }}
+        </a>
+        {{ end }}
+        {{ $labels := dict "fa-github" "GitHub" "fa-linkedin" "LinkedIn" }}
+        {{ range $hero.socialLinks.fontAwesomeIcons }}
+          {{ $key := .icon | replaceRE ".*?(fa-[a-z-]+).*" "$1" }}
+          {{ $label := index $labels $key | default ($key | replaceRE "fa-" "" | title) }}
+          <a class="rd-btn rd-btn-ghost" href="{{ .url }}" target="_blank" rel="noopener">
+            <i class="{{ .icon }}" aria-hidden="true"></i> {{ $label }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="rd-hero-figure rd-animate">
+      <div class="rd-frame">
+        <img class="rd-portrait" src="{{ $hero.image }}" alt="{{ $hero.title }}">
+        <div class="rd-ovl" aria-hidden="true">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="none">
+            <rect class="rd-box" x="34" y="30" width="332" height="440" rx="6"/>
+          </svg>
         </div>
+        <div class="rd-chip rd-chip-main" aria-hidden="true">ai_engineering_leader · 0.98</div>
+      </div>
     </div>
-    {{ if .Site.Params.hero.bottomImage.enable | default true }}
-    <div class="hero-bottom-svg d-md-block d-lg-block d-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
-            <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
-                <rect id="Rectangle_2206" data-name="Rectangle 2206" width="12" height="2" rx="1"
-                    transform="translate(391 1392) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2271" data-name="Rectangle 2271" width="12" height="2" rx="1"
-                    transform="translate(391 1500) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2238" data-name="Rectangle 2238" width="12" height="2" rx="1"
-                    transform="translate(391 1446) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2278" data-name="Rectangle 2278" width="12" height="2" rx="1"
-                    transform="translate(391 1554) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2222" data-name="Rectangle 2222" width="12" height="2" rx="1"
-                    transform="translate(391 1419) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2272" data-name="Rectangle 2272" width="12" height="2" rx="1"
-                    transform="translate(391 1527) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2241" data-name="Rectangle 2241" width="12" height="2" rx="1"
-                    transform="translate(391 1473) rotate(90)" fill="#282f49" />
-                <rect id="Rectangle_2288" data-name="Rectangle 2288" width="12" height="2" rx="1"
-                    transform="translate(391 1581) rotate(90)" fill="#282f49" />
-            </g>
-        </svg>
-    </div>
-    {{ end }}
+
+  </div>
+
+  <script>
+    (function () {
+      var fill = document.getElementById('rd-conf-fill');
+      var val = document.getElementById('rd-conf-val');
+      if (!fill || !val) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { fill.style.width = '98%'; val.textContent = '0.98'; return; }
+      window.addEventListener('load', function () {
+        fill.style.width = '98%';
+        var v = 0;
+        var t = setInterval(function () {
+          v += 0.04;
+          if (v >= 0.98) { v = 0.98; clearInterval(t); }
+          val.textContent = v.toFixed(2);
+        }, 58);
+      });
+    })();
+  </script>
 </section>
 {{ end }}

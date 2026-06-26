@@ -1,0 +1,174 @@
+/* =====================================================================
+   Redesign — Experience, grouped by company (Phase 4b)
+   Scoped under #experience.rd-experience. Paper surface; one --card group
+   per company with the company named once + total range, and the roles
+   nested as a vertical timeline (newest on top). Tokens from
+   redesign-foundations.css.
+   ===================================================================== */
+
+#experience.rd-experience {
+  padding: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--line) .9px, transparent .9px);
+  background-size: 26px 26px;
+}
+
+#experience.rd-experience .rd-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 28px 70px;
+}
+
+/* section eyebrow + title */
+#experience.rd-experience .rd-sec-eye {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+#experience.rd-experience .rd-br { color: var(--accent); }
+#experience.rd-experience .rd-sec-title {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: clamp(24px, 3.2vw, 30px);
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin: 0 0 26px;
+}
+
+/* company groups */
+#experience.rd-experience .rd-xgroups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 760px;
+}
+#experience.rd-experience .rd-xgroup {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 28px;
+}
+#experience.rd-experience .rd-xghead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+#experience.rd-experience .rd-xcompany {
+  font-family: var(--disp) !important;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin: 0;
+}
+#experience.rd-experience .rd-xrange {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* timeline of roles inside a company */
+#experience.rd-experience .rd-xrole {
+  position: relative;
+  padding-left: 26px;
+  padding-bottom: 26px;
+}
+#experience.rd-experience .rd-xrole:last-child {
+  padding-bottom: 0;
+}
+/* node */
+#experience.rd-experience .rd-xnode {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--ink-3);
+  z-index: 1;
+}
+/* the most recent role (first) marks "current" with an accent node */
+#experience.rd-experience .rd-xtimeline-multi .rd-xrole:first-child .rd-xnode {
+  border-color: var(--accent);
+}
+/* vertical connector joining the roles (only when there is more than one) */
+#experience.rd-experience .rd-xtimeline-multi .rd-xrole:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 15px;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+
+#experience.rd-experience .rd-xtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+#experience.rd-experience .rd-xrole-name {
+  font-family: var(--disp) !important;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0;
+}
+#experience.rd-experience .rd-xwhen {
+  font-family: var(--mono) !important;
+  font-size: 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  padding: 3px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#experience.rd-experience .rd-xco {
+  font-family: var(--mono) !important;
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+}
+#experience.rd-experience .rd-xbody {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+#experience.rd-experience .rd-xbody p { margin: 0 0 10px; }
+#experience.rd-experience .rd-xbody p:last-child { margin-bottom: 0; }
+#experience.rd-experience .rd-xbody ul { margin: 0; padding-left: 1.15em; }
+#experience.rd-experience .rd-xbody li { margin: 4px 0; }
+
+/* reveal on scroll (only with JS; no-JS keeps content visible) */
+html.rd-js #experience.rd-experience .rd-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s, transform .7s;
+}
+html.rd-js #experience.rd-experience .rd-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.rd-js #experience.rd-experience .rd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

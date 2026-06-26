@@ -92,9 +92,12 @@ it. Use it with restraint:
   a big display number with the unit in accent.
 
 **Hard don'ts for the motif** (learned from user feedback):
-- **Do NOT plaster literal category chips on his face/portrait** (no
-  `computer_vision`, `team_lead`, etc. labels stuck on the image). The single
-  confidence read-out is enough; labelling the person reads as gimmicky.
+- A detection label on the box is the motif; chips floating over the
+  face/body are not. KEEP a single YOLO-style label anchored to the top edge
+  of the bounding box (e.g. `ai_engineering_leader · 0.98`) — it's the
+  signature and it's wanted. Do NOT stick additional category chips over the
+  face or torso (no `computer_vision`, `team_lead`, etc. floating). One label
+  on the box: yes. Chips over the person: no.
 - Don't let the motif leak into every element. It's seasoning, not the meal.
 
 ## Motion — deliberate and counted

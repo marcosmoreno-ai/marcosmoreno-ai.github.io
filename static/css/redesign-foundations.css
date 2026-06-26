@@ -1,0 +1,75 @@
+/* =====================================================================
+   Redesign foundations (Phase 2) — design-system primitives only.
+
+   This file intentionally changes NOTHING visible yet. It only declares
+   the tokens, the paper-grid utility and the reduced-motion handling so
+   later phases can build the new hero/sections on top. None of the rules
+   below are applied to existing markup: the tokens are unconsumed custom
+   properties, and the utility/animation rules target redesign-only
+   classes (`.rd-grid`, `.rd-animate`) that do not exist in the current
+   page. Activating them happens in Phase 3+.
+   ===================================================================== */
+
+/* --- Design tokens (from the approved mockup) --- */
+:root {
+  /* surfaces — warm paper, lab/notebook feel */
+  --paper: #FAF8F3;
+  --paper-2: #F1EEE6;
+  --card: #FFFFFF;
+
+  /* ink */
+  --ink: #15181C;
+  --ink-2: #565C63;
+  --ink-3: #8A9098;
+  --line: #E5E0D5;
+
+  /* THE signal accent — reserved, never decorative */
+  --accent: #FF4A1C;
+  --accent-ink: #B5310E;
+  --accent-soft: rgba(255, 74, 28, .10);
+
+  /* type */
+  --disp: "Space Grotesk", sans-serif;   /* headlines, name, metric numbers */
+  --body: "Inter", sans-serif;           /* paragraphs */
+  --mono: "JetBrains Mono", monospace;   /* eyebrows, labels, data */
+}
+
+/* --- Paper dotted-grid background utility (staged, not yet applied) ---
+   Faint annotation/labeling canvas. Apply to <body> (or the page wrapper)
+   in a later phase when the surface flips to paper. */
+.rd-grid {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--line) .9px, transparent .9px);
+  background-size: 26px 26px;
+}
+
+/* --- Motion preference (staged) ---
+   When the redesign animations land they will carry the `.rd-animate`
+   hook; this guarantees they collapse to their final state for users who
+   ask for reduced motion. Inert today (no `.rd-animate` elements yet). */
+@media (prefers-reduced-motion: reduce) {
+  .rd-animate,
+  .rd-animate * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- Unified vertical rhythm ---
+   One identical top/bottom padding for every redesign section, so the gap
+   between any pair of sections is the same (= 2 × --rd-sec-pad) and tighter
+   than the original uneven theme spacing. Targets the element that carries
+   each section's vertical padding; horizontal gutters are left untouched. */
+:root { --rd-sec-pad: 24px; }
+#hero.rd-hero .rd-hero-grid,
+#metrics.rd-metrics .rd-metrics-grid,
+#about.rd-about .rd-wrap,
+#skills.rd-skills .rd-wrap,
+#experience.rd-experience .rd-wrap,
+#education.rd-education .rd-wrap,
+#projects.rd-projects .rd-wrap,
+#achievements.rd-achievements .rd-wrap,
+#contact.rd-contact .rd-wrap {
+  padding-top: var(--rd-sec-pad) !important;
+  padding-bottom: var(--rd-sec-pad) !important;
+}
