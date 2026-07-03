@@ -138,39 +138,37 @@ languages:
               - name: "AI Tech Lead"
                 date: "oct. 2024 - actualidad"
                 info:
-                  content: Liderando un equipo de IA de 5 personas (visión y agentes)
+                  content: 5 personas, visión + agentes, sin soltar el código
                 content: |
-                  Liderando un equipo de IA directo de 5 personas entre visión por computador y agentes — 2 etiquetadores, un ingeniero junior de IA, un ingeniero senior de IA y un desarrollador de agentes — además de coordinación transversal con IT en la app de agentes/RPA.
+                  Dirijo el equipo de IA: 2 etiquetadores, un ingeniero junior y uno senior de IA, y un desarrollador de agentes, repartidos entre visión por computador y agentes. La app de agentes/RPA implica además coordinación constante con IT.
 
-                  - Supervisión técnica de múltiples sistemas de visión artificial en producción con más de 30 modelos de deep learning (CNNs y Vision Transformers) desplegados en distintos proyectos.
-                  - Gestión de equipos y mentoría de perfiles junior y senior.
-                  - Puente entre ingenieros y dirección — reportes, defensa del equipo y resolución de bloqueos.
-                  - Introduje estándares de herramientas (uv, ruff, MLflow) que mejoraron la consistencia y redujeron la fricción dentro del equipo de ML.
-                  - Resolví bloqueos críticos de comunicación entre los equipos de IA e IT — malentendidos en la implementación de modelos y falta de alineación en versiones de dependencias clave (cuDNN, ONNX, TensorRT) que llevaban meses bloqueando los despliegues en producción.
+                  - Responsable técnico de los sistemas de visión en producción: más de 30 CNNs y Vision Transformers en distintos proyectos.
+                  - Convertí uv, ruff y MLflow en el estándar del equipo. Menos fricción, menos "en mi máquina funciona".
+                  - Desatasqué despliegues que llevaban meses parados por desajustes de versiones (cuDNN, ONNX, TensorRT) entre IA e IT.
+                  - Reporto hacia arriba, protejo al equipo y quito bloqueos.
+                  - Sigo con las manos en el código: entrenamiento, validación, decisiones de arquitectura y la cola de PRs.
 
               - name: "ML Engineer"
                 date: "may. 2022 - oct. 2024"
                 info:
-                  content: Responsabilidad total de los proyectos de visión artificial
+                  content: Toda la visión artificial, dos líneas en paralelo
                 content: |
-                  Asumí la responsabilidad total de los proyectos de visión artificial tras la reestructuración del equipo. Gestioné dos líneas de trabajo separadas — redes de segmentación y clasificación — simultáneamente.
+                  Tras una reestructuración heredé todos los proyectos de visión que teníamos: segmentación y clasificación, corriendo en paralelo.
 
-                  - Implementé MLflow para el seguimiento de modelos y mejoré los pipelines de pre/post-procesado.
-                  - Responsable del ciclo completo de ML: entrenamiento, experimentación, exportación ONNX y coordinación con IT para el despliegue en producción con TensorRT.
-                  - Refactoricé una base de código legacy de clasificación heredada en mal estado.
-                  - Incorporé y mentoricé a un nuevo miembro del equipo sin experiencia profesional previa en programación.
-                  - Formé a los etiquetadores del equipo — perfiles no técnicos — en metodología de dataset, workflow y nociones básicas de Python y SQL para que pudiesen generar scripts propios y lanzar queries, ganando autonomía en su trabajo diario.
+                  - El ciclo completo en mi mesa: entrenamiento, experimentos (MLflow), exportación a ONNX y despliegue con TensorRT junto a IT.
+                  - Refactoricé una base de código legacy de clasificación que nadie quería tocar.
+                  - Incorporé y mentoricé a un fichaje sin experiencia profesional previa programando.
+                  - Enseñé a los etiquetadores suficiente Python y SQL para que escribieran sus scripts y lanzaran sus propias queries.
 
               - name: "Junior ML Engineer"
                 date: "may. 2020 - may. 2022"
                 info:
-                  content: Primeros pasos en IA en producción
+                  content: Aprendiendo IA en producción por las malas
                 content: |
-                  Me incorporé durante un despliegue crítico en producción. Antes de tener acceso al repositorio, construí proactivamente herramientas en Python para automatizar tareas repetitivas de etiquetado y una app prototipo para gestionar divisiones del dataset — que luego sirvió de base para una herramienta interna más robusta.
+                  Llegué en mitad de un despliegue crítico, antes incluso de tener acceso al repo. Así que me puse a construir herramientas en Python para automatizar el etiquetado y un prototipo para gestionar splits del dataset — el prototipo acabó siendo la base de una herramienta interna.
 
-                  - Herramientas de automatización por iniciativa propia que mejoraron el flujo de trabajo de etiquetado del equipo.
-                  - Una vez con acceso al repositorio, avancé rápidamente hacia el fine-tuning de modelos y la experimentación con TensorFlow.
-                  - Primera experiencia con pipelines de despliegue de modelos en producción (formato .pb, coordinación con el equipo de IT).
+                  - Con acceso al repo, pasé al fine-tuning de modelos y la experimentación con TensorFlow.
+                  - Primeros despliegues en producción (formato .pb, codo con codo con IT).
 
           - company: "CFZ Cobots"
             companyUrl: "https://cfzcobots.com/"
@@ -181,9 +179,7 @@ languages:
                 info:
                   content: Prácticas universitarias
                 content: |
-                  Prácticas universitarias; primer contacto con visión por computador industrial.
-
-                  - Pruebas de software con cámaras industriales Omron FH Series y cámaras de profundidad Intel RealSense en Python.
+                  Primer contacto con la visión por computador industrial: pruebas de software con cámaras Omron FH Series y cámaras de profundidad Intel RealSense, en Python.
 
       # Education
       education:
@@ -467,39 +463,37 @@ params:
           - name: "AI Tech Lead"
             date: "Oct 2024 - Present"
             info:
-              content: Leading a 5-person AI team (computer vision and agents)
+              content: 5 people, vision + agents, still hands-on
             content: |
-              Leading a direct 5-person AI team across computer vision and AI agents — 2 labelers, a junior AI engineer, a senior AI engineer and an agents developer — plus cross-team coordination with IT on the agents/RPA app.
+              I run the AI team: 2 labelers, a junior and a senior AI engineer, and an agents developer, split across computer vision and AI agents. The agents/RPA app also means constant cross-team work with IT.
 
-              - Technical oversight of multiple production computer vision systems with 30+ deep learning models (CNNs and Vision Transformers) deployed across different projects.
-              - Team management and mentoring across junior and senior profiles.
-              - Bridge between engineers and upper management — reporting, protecting the team, unblocking delivery.
-              - Introduced tooling standards (uv, ruff, MLflow) that improved consistency and reduced friction within the ML team.
-              - Resolved critical communication breakdowns between the AI and IT teams — misalignments in model deployment and dependency versioning (cuDNN, ONNX, TensorRT) that had been blocking production deployments for months.
+              - Own the technical side of our production vision systems: 30+ CNNs and Vision Transformers across different projects.
+              - Made uv, ruff and MLflow the team standard. Less friction, fewer "works on my machine" conversations.
+              - Unblocked deployments that had been stuck for months on version mismatches (cuDNN, ONNX, TensorRT) between AI and IT.
+              - Report up, shield the team, remove blockers.
+              - Still hands-on: training, validation, architecture decisions and the PR queue.
 
           - name: "ML Engineer"
             date: "May 2022 - Oct 2024"
             info:
-              content: Full ownership of computer vision projects
+              content: All of computer vision, two workstreams in parallel
             content: |
-              Took full ownership of computer vision projects after the team restructured. Managed two separate workstreams — segmentation and classification networks — simultaneously.
+              After a restructure I inherited every computer vision project we had: segmentation and classification, running in parallel.
 
-              - Implemented MLflow for model tracking and improved pre/post-processing pipelines.
-              - Owned the full ML lifecycle: training, experimentation, ONNX export and coordination with IT for TensorRT production deployment.
-              - Refactored a legacy classification codebase inherited in poor condition.
-              - Onboarded and mentored a new team member with no prior professional programming experience.
-              - Trained non-technical labelers in dataset methodology, workflow, and basic Python and SQL — enabling them to write their own scripts and run queries autonomously.
+              - The full cycle on my desk: training, experiments (MLflow), ONNX export, TensorRT deployment alongside IT.
+              - Refactored a legacy classification codebase nobody wanted to touch.
+              - Onboarded and mentored a new hire with zero professional coding experience.
+              - Taught our labelers enough Python and SQL to write their own scripts and run their own queries.
 
           - name: "Junior ML Engineer"
             date: "May 2020 - May 2022"
             info:
-              content: First steps in production AI
+              content: Learning production AI the hard way
             content: |
-              Joined during a critical production deployment. Before getting repo access, proactively built Python tooling to automate repetitive labeling tasks and a prototype app to manage dataset splits — later used as the basis for a more robust internal tool.
+              Joined in the middle of a critical deployment, before I even had repo access. So I built Python tools to automate the labeling grind and a prototype for managing dataset splits — the prototype later grew into an internal tool.
 
-              - Self-initiated automation tools that improved the team's labeling workflow.
-              - Once given repo access, moved quickly into model fine-tuning and experimentation with TensorFlow.
-              - First experience with production model deployment pipelines (.pb format, coordinating with IT integration).
+              - Once inside the repo, moved on to model fine-tuning and experimentation with TensorFlow.
+              - First production deployments (.pb format, working side by side with IT).
 
       - company: "CFZ Cobots"
         companyUrl: "https://cfzcobots.com/"
@@ -510,9 +504,7 @@ params:
             info:
               content: University internship
             content: |
-              University internship; first contact with industrial computer vision.
-
-              - Software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras in Python.
+              First contact with industrial computer vision: software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras, in Python.
 
   # Education
   education:
