@@ -36,7 +36,7 @@ languages:
         intro: "Hola, soy"
         title: "Marcos Moreno Martínez"
         subtitle: "AI Engineering Leader"
-        content: "Ingeniero de ML con 6 años de experiencia en casos reales de producción, actualmente liderando dos equipos de IA. Especializado en Computer Vision, Deep Learning y en el liderazgo y la comunicación necesarios para que los proyectos lleguen a buen puerto."
+        content: "VRAIA me contrató de junior hace seis años. Hoy dirijo su equipo de IA: 5 personas, más de 30 modelos de deep learning en producción, y todo el trabajo poco glamuroso que los mantiene ahí."
         image: /images/ai-cv-image-2.jpg
         bottomImage:
           enable: true
@@ -83,15 +83,13 @@ languages:
         enable: true
         title: "Sobre Mí"
         content: |-
-          Soy Marcos, AI Engineering Leader con sede en España.
+          Soy Marcos. Entré en VRAIA en 2020 como el junior que automatizaba el trabajo de etiquetado; seis años después dirijo el equipo de IA. La misma empresa, un trabajo muy distinto — y sin soltar el código en todo el camino.
 
-          En los últimos 6 años en VRAIA he pasado de construir pipelines de datos a liderar equipos de Machine Learning e IA con más de 30 modelos de deep learning (CNNs y Vision Transformers) en producción. Más recientemente asumí la supervisión de un proyecto de AI Agents y RPA para ayudar a que saliera adelante.
+          Casi todo lo que sé viene de mantener más de 30 CNNs y Vision Transformers vivos en producción industrial. No la demo: los años de después. Drift, el infierno de dependencias (cuDNN, ONNX, TensorRT) y despliegues parados durante meses porque, entre IA e IT, cada uno iba un poco a su aire y nadie terminaba de entenderse.
 
-          Lo que he aprendido es que lo más difícil de la IA en producción no son los modelos — son las personas, la comunicación y los procesos. Llevo años moviéndome en esa frontera: con la solidez técnica para ganarme la confianza de mi equipo, y la visión organizativa para mantener las cosas en marcha cuando empiezan a atascarse.
+          Esa última parte resultó ser el trabajo de verdad. Lo que mata un proyecto de IA casi nunca es el modelo; es la comunicación. Hoy paso la mayor parte del tiempo en esa frontera: lo bastante técnico para que el equipo se fíe de mis reviews, lo bastante cerca de dirección para que los bloqueos se quiten de verdad.
 
-          Actualmente profundizando en AI Agents — construyendo con LangChain y LangGraph en mis proyectos personales.
-
-          C1 de inglés. Lidero con claridad. Hago crecer a las personas a mi alrededor.
+          En mi tiempo libre construyo agentes con LangChain y LangGraph, porque los próximos años apuntan ahí. Inglés C1 de Cambridge: lo leo a diario, y dos clases de conversación por semana lo mantienen despierto.
         skills:
           enable: true
           title: "Tecnologías con las que trabajo:"
@@ -140,39 +138,37 @@ languages:
               - name: "AI Tech Lead"
                 date: "oct. 2024 - actualidad"
                 info:
-                  content: Liderando un equipo de IA de 5 personas (visión y agentes)
+                  content: 5 personas, visión + agentes, sin soltar el código
                 content: |
-                  Liderando un equipo de IA directo de 5 personas entre visión por computador y agentes — 2 etiquetadores, un ingeniero junior de IA, un ingeniero senior de IA y un desarrollador de agentes — además de coordinación transversal con IT en la app de agentes/RPA.
+                  Dirijo el equipo de IA: 2 etiquetadores, un ingeniero junior y uno senior de IA, y un desarrollador de agentes, repartidos entre visión por computador y agentes. La app de agentes/RPA implica además coordinación constante con IT.
 
-                  - Supervisión técnica de múltiples sistemas de visión artificial en producción con más de 30 modelos de deep learning (CNNs y Vision Transformers) desplegados en distintos proyectos.
-                  - Gestión de equipos y mentoría de perfiles junior y senior.
-                  - Puente entre ingenieros y dirección — reportes, defensa del equipo y resolución de bloqueos.
-                  - Introduje estándares de herramientas (uv, ruff, MLflow) que mejoraron la consistencia y redujeron la fricción dentro del equipo de ML.
-                  - Resolví bloqueos críticos de comunicación entre los equipos de IA e IT — malentendidos en la implementación de modelos y falta de alineación en versiones de dependencias clave (cuDNN, ONNX, TensorRT) que llevaban meses bloqueando los despliegues en producción.
+                  - Responsable técnico de los sistemas de visión en producción: más de 30 CNNs y Vision Transformers en distintos proyectos.
+                  - Convertí uv, ruff y MLflow en el estándar del equipo. Menos fricción, menos "en mi máquina funciona".
+                  - Desatasqué despliegues que llevaban meses parados por desajustes de versiones (cuDNN, ONNX, TensorRT) entre IA e IT.
+                  - Reporto hacia arriba, protejo al equipo y quito bloqueos.
+                  - Sigo con las manos en el código: entrenamiento, validación, decisiones de arquitectura y la cola de PRs.
 
               - name: "ML Engineer"
                 date: "may. 2022 - oct. 2024"
                 info:
-                  content: Responsabilidad total de los proyectos de visión artificial
+                  content: Toda la visión artificial, dos líneas en paralelo
                 content: |
-                  Asumí la responsabilidad total de los proyectos de visión artificial tras la reestructuración del equipo. Gestioné dos líneas de trabajo separadas — redes de segmentación y clasificación — simultáneamente.
+                  Tras una reestructuración heredé todos los proyectos de visión que teníamos: segmentación y clasificación, corriendo en paralelo.
 
-                  - Implementé MLflow para el seguimiento de modelos y mejoré los pipelines de pre/post-procesado.
-                  - Responsable del ciclo completo de ML: entrenamiento, experimentación, exportación ONNX y coordinación con IT para el despliegue en producción con TensorRT.
-                  - Refactoricé una base de código legacy de clasificación heredada en mal estado.
-                  - Incorporé y mentoricé a un nuevo miembro del equipo sin experiencia profesional previa en programación.
-                  - Formé a los etiquetadores del equipo — perfiles no técnicos — en metodología de dataset, workflow y nociones básicas de Python y SQL para que pudiesen generar scripts propios y lanzar queries, ganando autonomía en su trabajo diario.
+                  - El ciclo completo en mi mesa: entrenamiento, experimentos (MLflow), exportación a ONNX y despliegue con TensorRT junto a IT.
+                  - Refactoricé una base de código legacy de clasificación que nadie quería tocar.
+                  - Incorporé y mentoricé a un fichaje sin experiencia profesional previa programando.
+                  - Enseñé a los etiquetadores suficiente Python y SQL para que escribieran sus scripts y lanzaran sus propias queries.
 
               - name: "Junior ML Engineer"
                 date: "may. 2020 - may. 2022"
                 info:
-                  content: Primeros pasos en IA en producción
+                  content: Aprendiendo IA en producción por las malas
                 content: |
-                  Me incorporé durante un despliegue crítico en producción. Antes de tener acceso al repositorio, construí proactivamente herramientas en Python para automatizar tareas repetitivas de etiquetado y una app prototipo para gestionar divisiones del dataset — que luego sirvió de base para una herramienta interna más robusta.
+                  Llegué en mitad de un despliegue crítico, antes incluso de tener acceso al repo. Así que me puse a construir herramientas en Python para automatizar el etiquetado y un prototipo para gestionar splits del dataset — el prototipo acabó siendo la base de una herramienta interna.
 
-                  - Herramientas de automatización por iniciativa propia que mejoraron el flujo de trabajo de etiquetado del equipo.
-                  - Una vez con acceso al repositorio, avancé rápidamente hacia el fine-tuning de modelos y la experimentación con TensorFlow.
-                  - Primera experiencia con pipelines de despliegue de modelos en producción (formato .pb, coordinación con el equipo de IT).
+                  - Con acceso al repo, pasé al fine-tuning de modelos y la experimentación con TensorFlow.
+                  - Primeros despliegues en producción (formato .pb, codo con codo con IT).
 
           - company: "CFZ Cobots"
             companyUrl: "https://cfzcobots.com/"
@@ -183,9 +179,7 @@ languages:
                 info:
                   content: Prácticas universitarias
                 content: |
-                  Prácticas universitarias; primer contacto con visión por computador industrial.
-
-                  - Pruebas de software con cámaras industriales Omron FH Series y cámaras de profundidad Intel RealSense en Python.
+                  Primer contacto con la visión por computador industrial: pruebas de software con cámaras Omron FH Series y cámaras de profundidad Intel RealSense, en Python.
 
       # Education
       education:
@@ -221,12 +215,13 @@ languages:
       achievements:
         enable: true
         items:
-          - title: 6 Años Creciendo en IA en Producción
-            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. De construir pipelines de datos a liderar un equipo de IA de 5 personas entre visión por computador y agentes, coordinando de forma transversal con IT.
+          - title: "De junior a Tech Lead, misma empresa"
+            meta: "VRAIA · 2020 — actualidad"
+            content: Entré en 2020 de junior. Seis años, dos ascensos y más de 30 modelos en producción después, dirijo el equipo. Cada paso, ganado en producción.
             image: /images/achievements/tree.png
           - title: "C1 Advanced (CAE)"
             meta: "Cambridge · 2021"
-            content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
+            content: "B2 en 2020, C1 en 2021 — ambos compaginados con jornada completa. Lo mantengo vivo con dos clases de conversación por semana. Verificación: B5924584."
             image: /images/achievements/cambridge.jpg
           - title: "Deep Learning Specialization"
             meta: "DeepLearning.AI · Andrew Ng · 2021"
@@ -270,7 +265,7 @@ languages:
                 url: "https://marcosmoreno-ai.github.io/"
           - title: "Arachne"
             status: "in progress"
-            content: "Un agente text-to-SQL sobre LangGraph: convierte preguntas en lenguaje natural en SQL ejecutable contra SQLite, con verificación y auto-corrección. Lo interesante no es el LLM —es una pieza pequeña— sino el control flow a su alrededor: un guard SELECT-only (sin queries destructivas), un repair loop acotado y evaluación por execution accuracy contra el dev set de Spider, con observabilidad vía LangSmith. En fase temprana: el esqueleto del grafo ya compila; el loop completo y las evals son el diseño previsto, todavía sin terminar."
+            content: "Un agente text-to-SQL sobre LangGraph: entra una pregunta en lenguaje natural, sale SQL verificado y ejecutado contra SQLite. El LLM es la parte pequeña; la ingeniería está en el control flow de alrededor — guard SELECT-only, repair loop acotado, evals de execution accuracy sobre el dev set de Spider y LangSmith para observabilidad. Fase temprana: el esqueleto del grafo compila; el loop completo está diseñado, no terminado. Prefiero enseñarlo honesto antes que brillante."
             badges:
               - "LangGraph"
               - "LangChain"
@@ -284,7 +279,7 @@ languages:
       contact:
         enable: true
         heading: "Construyamos algo que llegue a producción"
-        content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!
+        content: ¿Contratando? ¿Curiosidad por algo de lo que has visto? ¿Ganas de intercambiar batallitas de modelos en producción? Escríbeme — contesto.
         btnName: Escríbeme
         btnLink: mailto:marcosmoreno.of@gmail.com
 
@@ -367,7 +362,7 @@ params:
     intro: "Hi, I'm"
     title: "Marcos Moreno Martínez"
     subtitle: "AI Engineering Leader"
-    content: "I build and scale AI teams that actually ship. 6 years turning complex computer vision and AI systems into functioning, communicating, delivering teams."
+    content: "VRAIA hired me as a junior six years ago. Today I run their AI team: 5 people, 30+ deep learning models in production, and all the unglamorous work that keeps them there."
     image: /images/ai-cv-image-2.jpg
     bottomImage:
       enable: true
@@ -414,15 +409,13 @@ params:
     enable: true
     title: "About Me"
     content: |-
-      I'm Marcos, an AI Engineering Leader based in Spain.
+      I'm Marcos. I joined VRAIA in 2020 as the junior who automated the labeling grind; six years later I run the AI team. Same company, very different job — and I never let go of the code on the way up.
 
-      Over the last 6 years at VRAIA I've grown from building dataset pipelines to leading a Machine Learning team with 30+ deep learning models (CNNs and Vision Transformers) running in production. More recently I've taken on a supervisory role on an AI Agents and RPA project to help it ship on time.
+      Most of what I know comes from keeping 30+ CNNs and Vision Transformers alive in industrial production. Not the demo: the years after. Drift, dependency hell (cuDNN, ONNX, TensorRT), and deployments stalled for months because, between AI and IT, everyone did things a bit their own way and nobody quite understood each other.
 
-      What I've learned is that the hardest part of AI in production isn't the models — it's the people, the communication, and the process. I've spent years at that boundary: technically solid enough to earn my team's trust, and organizationally aware enough to keep things moving when they start to break down.
+      That last part turned out to be the real job. What kills an AI project is rarely the model; it's the communication. Most of my time now goes into that boundary — technical enough that the team trusts my reviews, close enough to management that blockers actually get removed.
 
-      Currently diving deeper into AI Agents — building with LangChain and LangGraph on the side.
-
-      C1 English. I lead with clarity. I grow people around me.
+      On my own time I build agents with LangChain and LangGraph, because that's where the next few years point. C1 English from Cambridge: I read it every day, and two speaking classes a week keep the spoken side awake.
     skills:
       enable: true
       title: "Technologies I work with:"
@@ -471,39 +464,37 @@ params:
           - name: "AI Tech Lead"
             date: "Oct 2024 - Present"
             info:
-              content: Leading a 5-person AI team (computer vision and agents)
+              content: 5 people, vision + agents, still hands-on
             content: |
-              Leading a direct 5-person AI team across computer vision and AI agents — 2 labelers, a junior AI engineer, a senior AI engineer and an agents developer — plus cross-team coordination with IT on the agents/RPA app.
+              I run the AI team: 2 labelers, a junior and a senior AI engineer, and an agents developer, split across computer vision and AI agents. The agents/RPA app also means constant cross-team work with IT.
 
-              - Technical oversight of multiple production computer vision systems with 30+ deep learning models (CNNs and Vision Transformers) deployed across different projects.
-              - Team management and mentoring across junior and senior profiles.
-              - Bridge between engineers and upper management — reporting, protecting the team, unblocking delivery.
-              - Introduced tooling standards (uv, ruff, MLflow) that improved consistency and reduced friction within the ML team.
-              - Resolved critical communication breakdowns between the AI and IT teams — misalignments in model deployment and dependency versioning (cuDNN, ONNX, TensorRT) that had been blocking production deployments for months.
+              - Own the technical side of our production vision systems: 30+ CNNs and Vision Transformers across different projects.
+              - Made uv, ruff and MLflow the team standard. Less friction, fewer "works on my machine" conversations.
+              - Unblocked deployments that had been stuck for months on version mismatches (cuDNN, ONNX, TensorRT) between AI and IT.
+              - Report up, shield the team, remove blockers.
+              - Still hands-on: training, validation, architecture decisions and the PR queue.
 
           - name: "ML Engineer"
             date: "May 2022 - Oct 2024"
             info:
-              content: Full ownership of computer vision projects
+              content: All of computer vision, two workstreams in parallel
             content: |
-              Took full ownership of computer vision projects after the team restructured. Managed two separate workstreams — segmentation and classification networks — simultaneously.
+              After a restructure I inherited every computer vision project we had: segmentation and classification, running in parallel.
 
-              - Implemented MLflow for model tracking and improved pre/post-processing pipelines.
-              - Owned the full ML lifecycle: training, experimentation, ONNX export and coordination with IT for TensorRT production deployment.
-              - Refactored a legacy classification codebase inherited in poor condition.
-              - Onboarded and mentored a new team member with no prior professional programming experience.
-              - Trained non-technical labelers in dataset methodology, workflow, and basic Python and SQL — enabling them to write their own scripts and run queries autonomously.
+              - The full cycle on my desk: training, experiments (MLflow), ONNX export, TensorRT deployment alongside IT.
+              - Refactored a legacy classification codebase nobody wanted to touch.
+              - Onboarded and mentored a new hire with zero professional coding experience.
+              - Taught our labelers enough Python and SQL to write their own scripts and run their own queries.
 
           - name: "Junior ML Engineer"
             date: "May 2020 - May 2022"
             info:
-              content: First steps in production AI
+              content: Learning production AI the hard way
             content: |
-              Joined during a critical production deployment. Before getting repo access, proactively built Python tooling to automate repetitive labeling tasks and a prototype app to manage dataset splits — later used as the basis for a more robust internal tool.
+              Joined in the middle of a critical deployment, before I even had repo access. So I built Python tools to automate the labeling grind and a prototype for managing dataset splits — the prototype later grew into an internal tool.
 
-              - Self-initiated automation tools that improved the team's labeling workflow.
-              - Once given repo access, moved quickly into model fine-tuning and experimentation with TensorFlow.
-              - First experience with production model deployment pipelines (.pb format, coordinating with IT integration).
+              - Once inside the repo, moved on to model fine-tuning and experimentation with TensorFlow.
+              - First production deployments (.pb format, working side by side with IT).
 
       - company: "CFZ Cobots"
         companyUrl: "https://cfzcobots.com/"
@@ -514,9 +505,7 @@ params:
             info:
               content: University internship
             content: |
-              University internship; first contact with industrial computer vision.
-
-              - Software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras in Python.
+              First contact with industrial computer vision: software testing with Omron FH Series industrial cameras and Intel RealSense depth cameras, in Python.
 
   # Education
   education:
@@ -552,12 +541,13 @@ params:
   achievements:
     enable: true
     items:
-      - title: 6 Years Growing in Production AI
-        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading a 5-person AI team across computer vision and AI agents, coordinating cross-team with IT.
+      - title: "Junior to Tech Lead, same company"
+        meta: "VRAIA · 2020 — present"
+        content: Hired in 2020 as a junior. Six years, two promotions and 30+ production models later, I run the team. Every step earned in production.
         image: /images/achievements/tree.png
       - title: "C1 Advanced (CAE)"
         meta: "Cambridge · 2021"
-        content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
+        content: "B2 in 2020, C1 in 2021 — both while working full-time. Kept alive with twice-weekly speaking classes. Verification: B5924584."
         image: /images/achievements/cambridge.jpg
       - title: "Deep Learning Specialization"
         meta: "DeepLearning.AI · Andrew Ng · 2021"
@@ -601,7 +591,7 @@ params:
             url: "https://marcosmoreno-ai.github.io/"
       - title: "Arachne"
         status: "in progress"
-        content: "A text-to-SQL agent built on LangGraph: it turns natural-language questions into executable SQL against SQLite, with verification and self-correction. The interesting part isn't the LLM —it's a small piece— it's the control flow around it: a SELECT-only guard (no destructive queries), a bounded repair loop, and evaluation by execution accuracy on the Spider dev set, with observability through LangSmith. Early stage: the graph skeleton compiles; the full loop and the evals are the intended design, not finished yet."
+        content: "A text-to-SQL agent on LangGraph: plain-English question in, verified SQL out, executed against SQLite. The LLM is the small part; the engineering is the control flow around it — a SELECT-only guard, a bounded repair loop, execution-accuracy evals on the Spider dev set, LangSmith for observability. Early days: the graph skeleton compiles, the full loop is designed but not built. I'd rather show it honest than shiny."
         badges:
           - "LangGraph"
           - "LangChain"
@@ -615,7 +605,7 @@ params:
   contact:
     enable: true
     heading: "Let's build something that ships"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    content: Hiring? Curious about something you saw here? Want to trade war stories about models in production? Write me — I answer.
     btnName: Mail me
     btnLink: mailto:marcosmoreno.of@gmail.com
 
