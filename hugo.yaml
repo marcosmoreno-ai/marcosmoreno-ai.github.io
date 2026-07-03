@@ -192,7 +192,7 @@ languages:
               url: "https://www.ua.es"
             date: "2015 - 2019"
             content: |-
-              Trabajo Fin de Grado: Asistente visual con IA para peatones ciegos en cruces.
+              Trabajo Fin de Grado: Asistente visual con IA para peatones con discapacidad visual en cruces.
 
               - Dataset propio de 1.010 imágenes etiquetadas (semáforo verde, semáforo rojo, paso de peatones) capturadas en varias ciudades españolas, de día y de noche.
               - Entrenamiento de YOLOv3 sobre Darknet con GPU Nvidia Quadro P6000, alcanzando un 92% de recall y 75% IoU en el conjunto de test.
@@ -518,7 +518,7 @@ params:
           url: "https://www.ua.es"
         date: "2015 - 2019"
         content: |-
-          Final Thesis: AI-powered visual assistant for blind pedestrians at crossings.
+          Final Thesis: AI-powered visual assistant for pedestrians with visual impairments at crossings.
 
           - Custom dataset of 1,010 labeled images (green light, red light, pedestrian crossing) captured across multiple Spanish cities, day and night.
           - Fine-tuned YOLOv3 on Darknet using an Nvidia Quadro P6000 GPU, reaching 92% recall and 75% IoU on the test set.
