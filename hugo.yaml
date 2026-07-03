@@ -36,7 +36,7 @@ languages:
         intro: "Hola, soy"
         title: "Marcos Moreno Martínez"
         subtitle: "AI Engineering Leader"
-        content: "Ingeniero de ML con 6 años de experiencia en casos reales de producción, actualmente liderando dos equipos de IA. Especializado en Computer Vision, Deep Learning y en el liderazgo y la comunicación necesarios para que los proyectos lleguen a buen puerto."
+        content: "VRAIA me contrató de junior hace seis años. Hoy dirijo su equipo de IA: 5 personas, más de 30 modelos de deep learning en producción, y todo el trabajo poco glamuroso que los mantiene ahí."
         image: /images/ai-cv-image-2.jpg
         bottomImage:
           enable: true
@@ -83,15 +83,13 @@ languages:
         enable: true
         title: "Sobre Mí"
         content: |-
-          Soy Marcos, AI Engineering Leader con sede en España.
+          Soy Marcos. Entré en VRAIA en 2020 como el junior que automatizaba el trabajo de etiquetado; seis años después dirijo el equipo de IA. La misma empresa, un trabajo muy distinto — y sin soltar el código en todo el camino.
 
-          En los últimos 6 años en VRAIA he pasado de construir pipelines de datos a liderar equipos de Machine Learning e IA con más de 30 modelos de deep learning (CNNs y Vision Transformers) en producción. Más recientemente asumí la supervisión de un proyecto de AI Agents y RPA para ayudar a que saliera adelante.
+          Casi todo lo que sé viene de mantener más de 30 CNNs y Vision Transformers vivos en producción industrial. No la demo: los años de después. Drift, el infierno de dependencias (cuDNN, ONNX, TensorRT) y despliegues parados durante meses porque dos equipos dejaron de hablarse.
 
-          Lo que he aprendido es que lo más difícil de la IA en producción no son los modelos — son las personas, la comunicación y los procesos. Llevo años moviéndome en esa frontera: con la solidez técnica para ganarme la confianza de mi equipo, y la visión organizativa para mantener las cosas en marcha cuando empiezan a atascarse.
+          Esa última parte resultó ser el trabajo de verdad. Lo que mata un proyecto de IA casi nunca es el modelo; es la comunicación. Hoy paso la mayor parte del tiempo en esa frontera: lo bastante técnico para que el equipo se fíe de mis reviews, lo bastante cerca de dirección para que los bloqueos se quiten de verdad.
 
-          Actualmente profundizando en AI Agents — construyendo con LangChain y LangGraph en mis proyectos personales.
-
-          C1 de inglés. Lidero con claridad. Hago crecer a las personas a mi alrededor.
+          En mi tiempo libre construyo agentes con LangChain y LangGraph, porque los próximos años apuntan ahí. Inglés C1 de Cambridge; lo uso a diario.
         skills:
           enable: true
           title: "Tecnologías con las que trabajo:"
@@ -367,7 +365,7 @@ params:
     intro: "Hi, I'm"
     title: "Marcos Moreno Martínez"
     subtitle: "AI Engineering Leader"
-    content: "I build and scale AI teams that actually ship. 6 years turning complex computer vision and AI systems into functioning, communicating, delivering teams."
+    content: "VRAIA hired me as a junior six years ago. Today I run their AI team: 5 people, 30+ deep learning models in production, and all the unglamorous work that keeps them there."
     image: /images/ai-cv-image-2.jpg
     bottomImage:
       enable: true
@@ -414,15 +412,13 @@ params:
     enable: true
     title: "About Me"
     content: |-
-      I'm Marcos, an AI Engineering Leader based in Spain.
+      I'm Marcos. I joined VRAIA in 2020 as the junior who automated the labeling grind; six years later I run the AI team. Same company, very different job — and I never let go of the code on the way up.
 
-      Over the last 6 years at VRAIA I've grown from building dataset pipelines to leading a Machine Learning team with 30+ deep learning models (CNNs and Vision Transformers) running in production. More recently I've taken on a supervisory role on an AI Agents and RPA project to help it ship on time.
+      Most of what I know comes from keeping 30+ CNNs and Vision Transformers alive in industrial production. Not the demo: the years after. Drift, dependency hell (cuDNN, ONNX, TensorRT), and deployments stalled for months because two teams stopped talking to each other.
 
-      What I've learned is that the hardest part of AI in production isn't the models — it's the people, the communication, and the process. I've spent years at that boundary: technically solid enough to earn my team's trust, and organizationally aware enough to keep things moving when they start to break down.
+      That last part turned out to be the real job. What kills an AI project is rarely the model; it's the communication. Most of my time now goes into that boundary — technical enough that the team trusts my reviews, close enough to management that blockers actually get removed.
 
-      Currently diving deeper into AI Agents — building with LangChain and LangGraph on the side.
-
-      C1 English. I lead with clarity. I grow people around me.
+      On my own time I build agents with LangChain and LangGraph, because that's where the next few years point. C1 English from Cambridge; I use it daily.
     skills:
       enable: true
       title: "Technologies I work with:"
