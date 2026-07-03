@@ -85,11 +85,11 @@ languages:
         content: |-
           Soy Marcos. Entré en VRAIA en 2020 como el junior que automatizaba el trabajo de etiquetado; seis años después dirijo el equipo de IA. La misma empresa, un trabajo muy distinto — y sin soltar el código en todo el camino.
 
-          Casi todo lo que sé viene de mantener más de 30 CNNs y Vision Transformers vivos en producción industrial. No la demo: los años de después. Drift, el infierno de dependencias (cuDNN, ONNX, TensorRT) y despliegues parados durante meses porque dos equipos dejaron de hablarse.
+          Casi todo lo que sé viene de mantener más de 30 CNNs y Vision Transformers vivos en producción industrial. No la demo: los años de después. Drift, el infierno de dependencias (cuDNN, ONNX, TensorRT) y despliegues parados durante meses porque, entre IA e IT, cada uno iba un poco a su aire y nadie terminaba de entenderse.
 
           Esa última parte resultó ser el trabajo de verdad. Lo que mata un proyecto de IA casi nunca es el modelo; es la comunicación. Hoy paso la mayor parte del tiempo en esa frontera: lo bastante técnico para que el equipo se fíe de mis reviews, lo bastante cerca de dirección para que los bloqueos se quiten de verdad.
 
-          En mi tiempo libre construyo agentes con LangChain y LangGraph, porque los próximos años apuntan ahí. Inglés C1 de Cambridge; lo uso a diario.
+          En mi tiempo libre construyo agentes con LangChain y LangGraph, porque los próximos años apuntan ahí. Inglés C1 de Cambridge: lo leo a diario, y dos clases de conversación por semana lo mantienen despierto.
         skills:
           enable: true
           title: "Tecnologías con las que trabajo:"
@@ -221,7 +221,7 @@ languages:
             image: /images/achievements/tree.png
           - title: "C1 Advanced (CAE)"
             meta: "Cambridge · 2021"
-            content: "B2 en 2020, C1 en 2021 — ambos compaginados con jornada completa. Lo mantengo vivo con clases de conversación semanales. Verificación: B5924584."
+            content: "B2 en 2020, C1 en 2021 — ambos compaginados con jornada completa. Lo mantengo vivo con dos clases de conversación por semana. Verificación: B5924584."
             image: /images/achievements/cambridge.jpg
           - title: "Deep Learning Specialization"
             meta: "DeepLearning.AI · Andrew Ng · 2021"
@@ -411,11 +411,11 @@ params:
     content: |-
       I'm Marcos. I joined VRAIA in 2020 as the junior who automated the labeling grind; six years later I run the AI team. Same company, very different job — and I never let go of the code on the way up.
 
-      Most of what I know comes from keeping 30+ CNNs and Vision Transformers alive in industrial production. Not the demo: the years after. Drift, dependency hell (cuDNN, ONNX, TensorRT), and deployments stalled for months because two teams stopped talking to each other.
+      Most of what I know comes from keeping 30+ CNNs and Vision Transformers alive in industrial production. Not the demo: the years after. Drift, dependency hell (cuDNN, ONNX, TensorRT), and deployments stalled for months because, between AI and IT, everyone did things a bit their own way and nobody quite understood each other.
 
       That last part turned out to be the real job. What kills an AI project is rarely the model; it's the communication. Most of my time now goes into that boundary — technical enough that the team trusts my reviews, close enough to management that blockers actually get removed.
 
-      On my own time I build agents with LangChain and LangGraph, because that's where the next few years point. C1 English from Cambridge; I use it daily.
+      On my own time I build agents with LangChain and LangGraph, because that's where the next few years point. C1 English from Cambridge: I read it every day, and two speaking classes a week keep the spoken side awake.
     skills:
       enable: true
       title: "Technologies I work with:"
@@ -547,7 +547,7 @@ params:
         image: /images/achievements/tree.png
       - title: "C1 Advanced (CAE)"
         meta: "Cambridge · 2021"
-        content: "B2 in 2020, C1 in 2021 — both while working full-time. Kept alive with weekly speaking classes. Verification: B5924584."
+        content: "B2 in 2020, C1 in 2021 — both while working full-time. Kept alive with twice-weekly speaking classes. Verification: B5924584."
         image: /images/achievements/cambridge.jpg
       - title: "Deep Learning Specialization"
         meta: "DeepLearning.AI · Andrew Ng · 2021"
