@@ -215,12 +215,13 @@ languages:
       achievements:
         enable: true
         items:
-          - title: 6 Años Creciendo en IA en Producción
-            content: De Junior ML Engineer a AI Tech Lead en la misma empresa. De construir pipelines de datos a liderar un equipo de IA de 5 personas entre visión por computador y agentes, coordinando de forma transversal con IT.
+          - title: "De junior a Tech Lead, misma empresa"
+            meta: "VRAIA · 2020 — actualidad"
+            content: Entré en 2020 de junior. Seis años, dos ascensos y más de 30 modelos en producción después, dirijo el equipo. Cada paso, ganado en producción.
             image: /images/achievements/tree.png
           - title: "C1 Advanced (CAE)"
             meta: "Cambridge · 2021"
-            content: "B2 en 2020 y C1 en 2021, ambos compaginándolo con trabajo a jornada completa — entre estudio autodidacta, academia y examen oficial. Mantenido activamente con clases de conversación semanales. Número de verificación: B5924584."
+            content: "B2 en 2020, C1 en 2021 — ambos compaginados con jornada completa. Lo mantengo vivo con clases de conversación semanales. Verificación: B5924584."
             image: /images/achievements/cambridge.jpg
           - title: "Deep Learning Specialization"
             meta: "DeepLearning.AI · Andrew Ng · 2021"
@@ -264,7 +265,7 @@ languages:
                 url: "https://marcosmoreno-ai.github.io/"
           - title: "Arachne"
             status: "in progress"
-            content: "Un agente text-to-SQL sobre LangGraph: convierte preguntas en lenguaje natural en SQL ejecutable contra SQLite, con verificación y auto-corrección. Lo interesante no es el LLM —es una pieza pequeña— sino el control flow a su alrededor: un guard SELECT-only (sin queries destructivas), un repair loop acotado y evaluación por execution accuracy contra el dev set de Spider, con observabilidad vía LangSmith. En fase temprana: el esqueleto del grafo ya compila; el loop completo y las evals son el diseño previsto, todavía sin terminar."
+            content: "Un agente text-to-SQL sobre LangGraph: entra una pregunta en lenguaje natural, sale SQL verificado y ejecutado contra SQLite. El LLM es la parte pequeña; la ingeniería está en el control flow de alrededor — guard SELECT-only, repair loop acotado, evals de execution accuracy sobre el dev set de Spider y LangSmith para observabilidad. Fase temprana: el esqueleto del grafo compila; el loop completo está diseñado, no terminado. Prefiero enseñarlo honesto antes que brillante."
             badges:
               - "LangGraph"
               - "LangChain"
@@ -278,7 +279,7 @@ languages:
       contact:
         enable: true
         heading: "Construyamos algo que llegue a producción"
-        content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!
+        content: ¿Contratando? ¿Curiosidad por algo de lo que has visto? ¿Ganas de intercambiar batallitas de modelos en producción? Escríbeme — contesto.
         btnName: Escríbeme
         btnLink: mailto:marcosmoreno.of@gmail.com
 
@@ -540,12 +541,13 @@ params:
   achievements:
     enable: true
     items:
-      - title: 6 Years Growing in Production AI
-        content: Junior ML Engineer to AI Tech Lead in the same company. From building dataset pipelines to leading a 5-person AI team across computer vision and AI agents, coordinating cross-team with IT.
+      - title: "Junior to Tech Lead, same company"
+        meta: "VRAIA · 2020 — present"
+        content: Hired in 2020 as a junior. Six years, two promotions and 30+ production models later, I run the team. Every step earned in production.
         image: /images/achievements/tree.png
       - title: "C1 Advanced (CAE)"
         meta: "Cambridge · 2021"
-        content: "Achieved B2 in 2020 and C1 in 2021, both while working full-time — through self-study, academy preparation and formal exams. Actively maintained through weekly speaking classes. Verification number: B5924584."
+        content: "B2 in 2020, C1 in 2021 — both while working full-time. Kept alive with weekly speaking classes. Verification: B5924584."
         image: /images/achievements/cambridge.jpg
       - title: "Deep Learning Specialization"
         meta: "DeepLearning.AI · Andrew Ng · 2021"
@@ -589,7 +591,7 @@ params:
             url: "https://marcosmoreno-ai.github.io/"
       - title: "Arachne"
         status: "in progress"
-        content: "A text-to-SQL agent built on LangGraph: it turns natural-language questions into executable SQL against SQLite, with verification and self-correction. The interesting part isn't the LLM —it's a small piece— it's the control flow around it: a SELECT-only guard (no destructive queries), a bounded repair loop, and evaluation by execution accuracy on the Spider dev set, with observability through LangSmith. Early stage: the graph skeleton compiles; the full loop and the evals are the intended design, not finished yet."
+        content: "A text-to-SQL agent on LangGraph: plain-English question in, verified SQL out, executed against SQLite. The LLM is the small part; the engineering is the control flow around it — a SELECT-only guard, a bounded repair loop, execution-accuracy evals on the Spider dev set, LangSmith for observability. Early days: the graph skeleton compiles, the full loop is designed but not built. I'd rather show it honest than shiny."
         badges:
           - "LangGraph"
           - "LangChain"
@@ -603,7 +605,7 @@ params:
   contact:
     enable: true
     heading: "Let's build something that ships"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    content: Hiring? Curious about something you saw here? Want to trade war stories about models in production? Write me — I answer.
     btnName: Mail me
     btnLink: mailto:marcosmoreno.of@gmail.com
 
