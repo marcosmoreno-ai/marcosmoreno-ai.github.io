@@ -70,16 +70,17 @@
 
 /* terminal-style type-in: the eyebrow writes itself once on load and the
    caret blinks a few times, then leaves. Pure CSS — the mono font makes
-   `ch` an exact character grid ("inference: live" = 15ch / 15 steps). */
+   `ch` an exact character grid ("inference: live · model v2026" = 29ch /
+   29 steps, same ~73ms/char pace as before). */
 #hero.rd-hero .rd-type {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: rd-type 1.1s steps(15, end) .4s forwards;
+  animation: rd-type 2.13s steps(29, end) .4s forwards;
 }
 @keyframes rd-type {
-  to { width: 15ch; }
+  to { width: 29ch; }
 }
 #hero.rd-hero .rd-caret {
   display: inline-block;
@@ -291,6 +292,6 @@
   #hero.rd-hero .rd-dot { animation: none; }
   #hero.rd-hero .rd-btn { transition: none; }
   #hero.rd-hero .rd-chip { opacity: 1; transform: none; animation: none; }
-  #hero.rd-hero .rd-type { width: 15ch; animation: none; }
+  #hero.rd-hero .rd-type { width: 29ch; animation: none; }
   #hero.rd-hero .rd-caret { animation: none; opacity: 0; }
 }
