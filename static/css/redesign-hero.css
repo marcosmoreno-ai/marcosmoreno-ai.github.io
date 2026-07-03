@@ -39,6 +39,9 @@
     grid-template-columns: 1fr;
     gap: 36px;
   }
+  /* keep eyebrow + confidence + name reading as one block on mobile */
+  #hero.rd-hero .rd-eyebrow { margin-bottom: 12px; }
+  #hero.rd-hero .rd-conf { margin-bottom: 10px; }
 }
 
 /* --- eyebrow + live dot --- */
@@ -63,6 +66,33 @@
   0%   { box-shadow: 0 0 0 0 rgba(255, 74, 28, .45); }
   70%  { box-shadow: 0 0 0 8px rgba(255, 74, 28, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 74, 28, 0); }
+}
+
+/* terminal-style type-in: the eyebrow writes itself once on load and the
+   caret blinks a few times, then leaves. Pure CSS — the mono font makes
+   `ch` an exact character grid ("inference: live" = 15ch / 15 steps). */
+#hero.rd-hero .rd-type {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: rd-type 1.1s steps(15, end) .4s forwards;
+}
+@keyframes rd-type {
+  to { width: 15ch; }
+}
+#hero.rd-hero .rd-caret {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  margin-left: -4px;
+  background: var(--accent);
+  opacity: 0;
+  animation: rd-caret .6s step-end 7 .35s;
+}
+@keyframes rd-caret {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
 }
 
 /* --- confidence read-out --- */
@@ -261,4 +291,6 @@
   #hero.rd-hero .rd-dot { animation: none; }
   #hero.rd-hero .rd-btn { transition: none; }
   #hero.rd-hero .rd-chip { opacity: 1; transform: none; animation: none; }
+  #hero.rd-hero .rd-type { width: 15ch; animation: none; }
+  #hero.rd-hero .rd-caret { animation: none; opacity: 0; }
 }
