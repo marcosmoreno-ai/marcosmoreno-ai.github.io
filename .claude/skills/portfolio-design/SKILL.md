@@ -70,8 +70,9 @@ change, because they explain *why* the rules exist:
 
 `--accent` is allowed on, and basically *only* on:
 the live "detection" graphics, the confidence bar, the **primary CTA**, the
-**key metric numbers/units**, the active nav state, and a **small** number of
-highlighted "in production" skill pills. Everything else is ink/neutral.
+**key metric numbers/units**, and the active nav state. Everything else is
+ink/neutral. Skill/tech pills are ALWAYS neutral — the owner explicitly
+rejected accent ("hot") pills; do not reintroduce them.
 
 Before shipping any change, count the accent uses on screen. If it's creeping
 onto borders, backgrounds, icons, every link — pull it back. Scarcity is the
@@ -141,10 +142,10 @@ build and sanity-check the hero, metrics, and mobile width after each change.
 ## Worked example — adding a project card
 
 Stay in the system: card on `--card`, 1px `--line`, radius ~14px; a mono
-`[ project ]` eyebrow; title in `--disp` 500; the tech stack as mono pills with
-**at most one or two** marked "in production" using the accent (`.hot`); a short
-plain-language outcome sentence led by a hard number if there is one (e.g.
-"92% recall, 75% IoU"). No accent on the card border or background.
+`[ project ]` eyebrow; title in `--disp` 500; the tech stack as neutral mono
+pills (never accent — owner preference); a short plain-language outcome
+sentence led by a hard number if there is one (e.g. "92% recall, 75% IoU").
+No accent on the card border or background.
 
 ## Self-check before finishing any task
 

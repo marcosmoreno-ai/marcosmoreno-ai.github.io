@@ -1,8 +1,8 @@
 /* =====================================================================
    Redesign — Skills "classes detected" (Phase 4b)
-   Scoped under #skills.rd-skills. Paper surface; tech as mono pills, only
-   the real production tools marked .rd-pill-hot (accent). Tokens from
-   redesign-foundations.css.
+   Scoped under #skills.rd-skills. Paper surface; tech as neutral mono
+   pills on --card (all white by owner preference — no accent pills).
+   Tokens from redesign-foundations.css.
    ===================================================================== */
 
 #skills.rd-skills {
@@ -63,12 +63,6 @@
   padding: 7px 13px;
   border-radius: 7px;
 }
-#skills.rd-skills .rd-pill-hot {
-  color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
 /* reveal on scroll (only with JS; no-JS keeps content visible) */
 html.rd-js #skills.rd-skills .rd-reveal {
   opacity: 0;

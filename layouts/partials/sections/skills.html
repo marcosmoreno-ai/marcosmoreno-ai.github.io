@@ -1,7 +1,6 @@
 {{ if .Site.Params.about.skills.enable | default false }}
 {{- $about := .Site.Language.Params.about | default .Site.Params.about -}}
 {{- $skills := $about.skills | default .Site.Params.about.skills -}}
-{{- $hot := slice "PyTorch" "TensorFlow" "OpenCV" "MLflow" "LangChain" "LangGraph" -}}
 <section id="skills" class="rd-skills">
   <div class="rd-wrap rd-reveal">
     <div class="rd-sec-eye" aria-hidden="true"><span class="rd-br">[</span> classes detected <span class="rd-br">]</span></div>
@@ -12,7 +11,7 @@
       <div class="rd-grp-label">// {{ lower .name }}</div>
       <div class="rd-pills">
         {{ range .items }}
-        <span class="rd-pill{{ if in $hot . }} rd-pill-hot{{ end }}">{{ . }}</span>
+        <span class="rd-pill">{{ . }}</span>
         {{ end }}
       </div>
     </div>
