@@ -137,7 +137,7 @@
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#contact"
                             aria-label="contact">
-                            {{ .Site.Params.contact.title | default (i18n "nav_contact") }}
+                            {{ i18n "nav_contact" }}
                         </a>
                     </li>
                     {{ end }}

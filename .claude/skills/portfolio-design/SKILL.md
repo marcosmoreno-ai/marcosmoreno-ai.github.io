@@ -95,7 +95,7 @@ it. Use it with restraint:
 **Hard don'ts for the motif** (learned from user feedback):
 - A detection label on the box is the motif; chips floating over the
   face/body are not. KEEP a single YOLO-style label anchored to the top edge
-  of the bounding box (e.g. `ai_engineering_leader · 0.98`) — it's the
+  of the bounding box (e.g. `person · 0.98`) — it's the
   signature and it's wanted. Do NOT stick additional category chips over the
   face or torso (no `computer_vision`, `team_lead`, etc. floating). One label
   on the box: yes. Chips over the person: no.
