@@ -73,3 +73,25 @@
   padding-top: var(--rd-sec-pad) !important;
   padding-bottom: var(--rd-sec-pad) !important;
 }
+
+/* Justified running text across sections.
+   No automatic hyphenation (no words split like "per- miso").
+   Without hyphenation, justify leaves wide gaps on narrow screens,
+   so phones (<=480px) fall back to left alignment. */
+#about .rd-about-body,
+#experience .rd-xbody,
+#education .rd-xbody,
+#projects .rd-proj-body,
+#achievements .rd-ach-body {
+  text-align: justify;
+  hyphens: manual;
+}
+@media (max-width: 480px) {
+  #about .rd-about-body,
+  #experience .rd-xbody,
+  #education .rd-xbody,
+  #projects .rd-proj-body,
+  #achievements .rd-ach-body {
+    text-align: left;
+  }
+}
