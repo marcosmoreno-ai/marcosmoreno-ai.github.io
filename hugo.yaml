@@ -35,8 +35,8 @@ languages:
         enable: true
         intro: "Hola, soy"
         title: "Marcos Moreno Martínez"
-        subtitle: "AI Engineering Leader"
-        content: "VRAIA me contrató de junior hace seis años. Hoy dirijo su equipo de IA: 5 personas, más de 30 modelos de deep learning en producción, y todo el trabajo poco glamuroso que los mantiene ahí."
+        subtitle: "Machine Learning Engineer & AI Technical Lead"
+        content: "Ayudo a convertir proyectos de IA en sistemas fiables que generan valor fuera del laboratorio. Especializado en visión artificial, machine learning y despliegue en producción."
         image: /images/ai-cv-image-2.jpg
         bottomImage:
           enable: true
@@ -58,38 +58,41 @@ languages:
         enable: true
         items:
           - label: "role"
-            pre: "AI Tech "
-            accent: "Lead"
-            post: ""
-            sub: "@ VRAIA · desde 2024"
+            pre: ""
+            accent: "30+"
+            post: " modelos en producción"
+            sub: "visión artificial en entornos industriales"
           - label: "team"
-            pre: "5 personas"
+            pre: "5 personas coordinadas técnicamente"
             accent: ""
             post: ""
-            sub: "computer vision + ai agents"
-          - label: "trajectory"
-            pre: "6 años, una empresa"
+            sub: "entre ingeniería, datos e IA"
+          - label: "experience"
+            pre: "Ciclo de vida completo"
             accent: ""
             post: ""
-            sub: "junior → tech lead"
+            sub: "del dato en bruto al modelo desplegado"
           - label: "focus"
-            pre: "investigación "
+            pre: "Investigación "
             accent: "→"
             post: " producción"
-            sub: "donde los modelos llegan a producción"
+            sub: "modelos que aportan valor real"
 
       # About
       about:
         enable: true
         title: "Sobre Mí"
         content: |-
-          Soy Marcos. Entré en VRAIA en 2020 como el junior que automatizaba el trabajo de etiquetado; seis años después dirijo el equipo de IA. La misma empresa, un trabajo muy distinto — y sin soltar el código en todo el camino.
+          Soy ingeniero de robótica especializado en visión artificial y machine learning.
 
-          Casi todo lo que sé viene de mantener más de 30 CNNs y Vision Transformers vivos en producción industrial. No la demo: los años de después. Drift, el infierno de dependencias (cuDNN, ONNX, TensorRT) y despliegues parados durante meses porque, entre IA e IT, cada uno iba un poco a su aire y nadie terminaba de entenderse.
+          He desarrollado gran parte de mi carrera en entornos industriales, trabajando en sistemas de inspección automática y participando en todas las fases del ciclo de vida de un proyecto: adquisición de datos, construcción de datasets, entrenamiento de modelos, despliegue y mantenimiento en producción.
 
-          Esa última parte resultó ser el trabajo de verdad. Lo que mata un proyecto de IA casi nunca es el modelo; es la comunicación. Hoy paso la mayor parte del tiempo en esa frontera: lo bastante técnico para que el equipo se fíe de mis reviews, lo bastante cerca de dirección para que los bloqueos se quiten de verdad.
+          Con el tiempo también he asumido responsabilidades de coordinación técnica y gestión de equipos. Aun así, sigo disfrutando especialmente de la parte de ingeniería: entender por qué algo falla, encontrar cuellos de botella y construir soluciones que puedan mantenerse a largo plazo.
 
-          En mi tiempo libre construyo agentes con LangChain y LangGraph, porque los próximos años apuntan ahí. Inglés C1 de Cambridge: lo leo a diario, y dos clases de conversación por semana lo mantienen despierto.
+          Me interesan los proyectos donde la IA resuelve problemas reales y donde las decisiones técnicas tienen un impacto tangible en el producto, las operaciones o el negocio.
+
+          Actualmente estoy ampliando mi experiencia en sistemas basados en LLMs, agentes y automatización, explorando cómo complementar los sistemas tradicionales de machine learning con nuevas capacidades generativas.
+
         skills:
           enable: true
           title: "Tecnologías con las que trabajo:"
@@ -248,6 +251,26 @@ languages:
       projects:
         enable: true
         items:
+          - title: "Kogara"
+            status: "en prueba cerrada"
+            statusBeta: true
+            content: |-
+              App Android de finanzas personales que funciona sin conexión: sin cuentas, sin nube y sin permiso de internet. Reparte cada ingreso en tres bolsas (gastos, ahorro e inversión) y lleva movimientos, recurrentes y un análisis por meses.
+
+              Lo que más cuidado pidió fue que fuera fiable sin servidor: importes en céntimos y BigDecimal para que los porcentajes cuadren exactos, historial por fecha para que cambiar un objetivo no reescriba los meses cerrados, y recurrentes que no se duplican aunque cambie el reloj del móvil.
+
+              La desarrollo dirigiendo sesiones de Claude Code: yo decido producto y diseño, apruebo cada pieza, la pruebo en el móvil y publico las versiones. El método también forma parte del proyecto: roadmap, una guía de trabajo común para agentes y personas y revisión de código antes de cada fusión.
+
+              Unas 31.000 líneas de Kotlin y casi 1.000 tests. De momento es gratuita y está en prueba cerrada en Google Play.
+            badges:
+              - "Kotlin"
+              - "Jetpack Compose"
+              - "Room / SQLite"
+              - "Claude Code"
+              - "Cloudflare Pages"
+            links:
+              - label: "Ver web"
+                url: "https://kogara.app"
           - title: "Este portfolio"
             status: "live"
             statusLive: true
@@ -264,6 +287,7 @@ languages:
               - label: "Ver sitio"
                 url: "https://marcosmoreno-ai.github.io/"
           - title: "Arachne"
+            hidden: true  # abandonado; oculto pero se conserva el texto
             status: "in progress"
             content: "Un agente text-to-SQL sobre LangGraph: entra una pregunta en lenguaje natural, sale SQL verificado y ejecutado contra SQLite. El LLM es la parte pequeña; la ingeniería está en el control flow de alrededor — guard SELECT-only, repair loop acotado, evals de execution accuracy sobre el dev set de Spider y LangSmith para observabilidad. Fase temprana: el esqueleto del grafo compila; el loop completo está diseñado, no terminado. Prefiero enseñarlo honesto antes que brillante."
             badges:
@@ -304,7 +328,7 @@ markup:
 
 params:
   title: "Marcos M.M."
-  description: "AI Engineering Leader — Machine Learning & Computer Vision"
+  description: "Machine Learning Engineer & AI Technical Lead — Computer Vision"
   favicon: "/images/fav.png"
 
   useBootstrapCDN: false
@@ -361,8 +385,8 @@ params:
     enable: true
     intro: "Hi, I'm"
     title: "Marcos Moreno Martínez"
-    subtitle: "AI Engineering Leader"
-    content: "VRAIA hired me as a junior six years ago. Today I run their AI team: 5 people, 30+ deep learning models in production, and all the unglamorous work that keeps them there."
+    subtitle: "Machine Learning Engineer & AI Technical Lead"
+    content: "I help turn AI projects into reliable systems that deliver value outside the lab. Specialised in computer vision, machine learning and production deployment."
     image: /images/ai-cv-image-2.jpg
     bottomImage:
       enable: true
@@ -384,38 +408,41 @@ params:
     enable: true
     items:
       - label: "role"
-        pre: "AI Tech "
-        accent: "Lead"
-        post: ""
-        sub: "@ VRAIA · since 2024"
+        pre: ""
+        accent: "30+"
+        post: " models in production"
+        sub: "computer vision in industrial settings"
       - label: "team"
-        pre: "5 people"
+        pre: "5 people, technical coordination"
         accent: ""
         post: ""
-        sub: "computer vision + ai agents"
-      - label: "trajectory"
-        pre: "6 yrs, one company"
+        sub: "across engineering, data and AI"
+      - label: "experience"
+        pre: "Full lifecycle"
         accent: ""
         post: ""
-        sub: "junior → tech lead"
+        sub: "from raw data to deployed model"
       - label: "focus"
-        pre: "research "
+        pre: "Research "
         accent: "→"
         post: " production"
-        sub: "where models actually ship"
+        sub: "models that deliver real value"
 
   # About
   about:
     enable: true
     title: "About Me"
     content: |-
-      I'm Marcos. I joined VRAIA in 2020 as the junior who automated the labeling grind; six years later I run the AI team. Same company, very different job — and I never let go of the code on the way up.
+      I'm a robotics engineer specialised in computer vision and machine learning.
 
-      Most of what I know comes from keeping 30+ CNNs and Vision Transformers alive in industrial production. Not the demo: the years after. Drift, dependency hell (cuDNN, ONNX, TensorRT), and deployments stalled for months because, between AI and IT, everyone did things a bit their own way and nobody quite understood each other.
+      I've spent most of my career in industrial settings, working on automated inspection systems and taking part in every stage of a project's lifecycle: data acquisition, dataset building, model training, deployment and maintenance in production.
 
-      That last part turned out to be the real job. What kills an AI project is rarely the model; it's the communication. Most of my time now goes into that boundary — technical enough that the team trusts my reviews, close enough to management that blockers actually get removed.
+      Over time I've also taken on technical coordination and team management. Even so, the engineering side is still what I enjoy most: understanding why something fails, finding bottlenecks and building solutions that can be maintained in the long run.
 
-      On my own time I build agents with LangChain and LangGraph, because that's where the next few years point. C1 English from Cambridge: I read it every day, and two speaking classes a week keep the spoken side awake.
+      I'm interested in projects where AI solves real problems and where technical decisions have a tangible impact on the product, operations or the business.
+
+      I'm currently broadening my experience with LLM-based systems, agents and automation, exploring how to complement traditional machine learning systems with new generative capabilities.
+
     skills:
       enable: true
       title: "Technologies I work with:"
@@ -574,6 +601,26 @@ params:
   projects:
     enable: true
     items:
+      - title: "Kogara"
+        status: "closed testing"
+        statusBeta: true
+        content: |-
+          An Android personal finance app that works offline: no accounts, no cloud and no internet permission. It splits each income into three pots (spending, savings and investment) and tracks transactions, recurring entries and a month-by-month analysis.
+
+          What needed the most care was making it reliable without a server: amounts in cents and BigDecimal so percentages add up exactly, date-effective history so changing a goal never rewrites closed months, and recurring entries that never duplicate even if the phone's clock changes.
+
+          I build it by directing Claude Code sessions: I decide product and design, approve each piece, test it on my phone and publish the releases. The method is part of the project too: a roadmap, a single working guide for agents and people alike, and code review before every merge.
+
+          About 31,000 lines of Kotlin and nearly 1,000 tests. Free for now, and in closed testing on Google Play.
+        badges:
+          - "Kotlin"
+          - "Jetpack Compose"
+          - "Room / SQLite"
+          - "Claude Code"
+          - "Cloudflare Pages"
+        links:
+          - label: "View site"
+            url: "https://kogara.app"
       - title: "This portfolio"
         status: "live"
         statusLive: true
@@ -590,6 +637,7 @@ params:
           - label: "View site"
             url: "https://marcosmoreno-ai.github.io/"
       - title: "Arachne"
+        hidden: true  # abandoned; hidden but text kept
         status: "in progress"
         content: "A text-to-SQL agent on LangGraph: plain-English question in, verified SQL out, executed against SQLite. The LLM is the small part; the engineering is the control flow around it — a SELECT-only guard, a bounded repair loop, execution-accuracy evals on the Spider dev set, LangSmith for observability. Early days: the graph skeleton compiles, the full loop is designed but not built. I'd rather show it honest than shiny."
         badges:

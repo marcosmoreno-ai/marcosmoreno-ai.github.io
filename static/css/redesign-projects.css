@@ -94,6 +94,11 @@
 #projects.rd-projects .rd-proj-status-live .rd-proj-dot {
   background: var(--accent);
 }
+/* 'beta' status (closed testing): accent ring, halfway between wip and live */
+#projects.rd-projects .rd-proj-status-beta .rd-proj-dot {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+}
 
 #projects.rd-projects .rd-proj-body {
   font-size: 15px;
@@ -101,6 +106,7 @@
   color: var(--ink-2);
 }
 #projects.rd-projects .rd-proj-body p { margin: 0; }
+#projects.rd-projects .rd-proj-body p + p { margin-top: 12px; }
 
 /* stack pills (mono, neutral) */
 #projects.rd-projects .rd-proj-pills {
