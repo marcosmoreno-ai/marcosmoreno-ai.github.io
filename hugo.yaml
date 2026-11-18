@@ -268,6 +268,7 @@ languages:
               - label: "Ver web"
                 url: "https://kogara.app"
           - title: "Este portfolio"
+            hidden: true  # oculto: redundante dentro de la propia web
             status: "live"
             statusLive: true
             content: "El sitio en el que estás. Un sitio Hugo sin dependencia de theme: aplané el theme original (un submódulo de git) en mis propios layouts y construí un sistema de diseño documentado —el motivo de «detección»— mantenido como una skill de Claude Code. Se despliega solo en GitHub Pages mediante un pipeline de GitHub Actions."
@@ -614,6 +615,7 @@ params:
           - label: "View site"
             url: "https://kogara.app"
       - title: "This portfolio"
+        hidden: true  # hidden: redundant on the site itself
         status: "live"
         statusLive: true
         content: "The site you're on. A Hugo site with no theme dependency: I flattened the original submodule theme into my own layouts, then built a documented design system —the 'detection' motif— maintained as a Claude Code skill. It ships automatically to GitHub Pages through a GitHub Actions pipeline."
