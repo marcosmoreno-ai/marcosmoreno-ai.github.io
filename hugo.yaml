@@ -218,10 +218,6 @@ languages:
       achievements:
         enable: true
         items:
-          - title: "De junior a Tech Lead, misma empresa"
-            meta: "VRAIA · 2020 — actualidad"
-            content: Entré en 2020 de junior. Seis años, dos ascensos y más de 30 modelos en producción después, dirijo el equipo. Cada paso, ganado en producción.
-            image: /images/achievements/tree.png
           - title: "C1 Advanced (CAE)"
             meta: "Cambridge · 2021"
             content: "B2 en 2020, C1 en 2021 — ambos compaginados con jornada completa. Lo mantengo vivo con dos clases de conversación por semana. Verificación: B5924584."
@@ -568,10 +564,6 @@ params:
   achievements:
     enable: true
     items:
-      - title: "Junior to Tech Lead, same company"
-        meta: "VRAIA · 2020 — present"
-        content: Hired in 2020 as a junior. Six years, two promotions and 30+ production models later, I run the team. Every step earned in production.
-        image: /images/achievements/tree.png
       - title: "C1 Advanced (CAE)"
         meta: "Cambridge · 2021"
         content: "B2 in 2020, C1 in 2021 — both while working full-time. Kept alive with twice-weekly speaking classes. Verification: B5924584."
