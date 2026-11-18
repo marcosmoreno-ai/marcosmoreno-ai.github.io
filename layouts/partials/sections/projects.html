@@ -6,11 +6,11 @@
     <h2 class="rd-sec-title">{{ $projects.title | default (i18n "projects") }}</h2>
 
     <div class="rd-proj-cards">
-      {{ range $projects.items }}
+      {{ range where $projects.items "hidden" "!=" true }}
       <article class="rd-proj-card rd-reveal">
         <div class="rd-xtop">
           <h3 class="rd-proj-title">{{ .title }}</h3>
-          {{ if .status }}<span class="rd-proj-status{{ if .statusLive }} rd-proj-status-live{{ end }}"><span class="rd-proj-dot" aria-hidden="true"></span>{{ .status }}</span>{{ end }}
+          {{ if .status }}<span class="rd-proj-status{{ if .statusLive }} rd-proj-status-live{{ else if .statusBeta }} rd-proj-status-beta{{ end }}"><span class="rd-proj-dot" aria-hidden="true"></span>{{ .status }}</span>{{ end }}
         </div>
         {{ with .content }}<div class="rd-proj-body">{{ . | markdownify }}</div>{{ end }}
         {{ with .badges }}

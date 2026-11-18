@@ -248,6 +248,26 @@ languages:
       projects:
         enable: true
         items:
+          - title: "Kogara"
+            status: "en prueba cerrada"
+            statusBeta: true
+            content: |-
+              App Android de finanzas personales que funciona sin conexión: sin cuentas, sin nube y sin permiso de internet. Reparte cada ingreso en tres bolsas (gastos, ahorro e inversión) y lleva movimientos, recurrentes y un análisis por meses.
+
+              Lo que más cuidado pidió fue que fuera fiable sin servidor: importes en céntimos y BigDecimal para que los porcentajes cuadren exactos, historial por fecha para que cambiar un objetivo no reescriba los meses cerrados, y recurrentes que no se duplican aunque cambie el reloj del móvil.
+
+              La desarrollo dirigiendo sesiones de Claude Code: yo decido producto y diseño, apruebo cada pieza, la pruebo en el móvil y publico las versiones. El método también forma parte del proyecto: roadmap, una guía de trabajo común para agentes y personas y revisión de código antes de cada fusión.
+
+              Unas 31.000 líneas de Kotlin y casi 1.000 tests. De momento es gratuita y está en prueba cerrada en Google Play.
+            badges:
+              - "Kotlin"
+              - "Jetpack Compose"
+              - "Room / SQLite"
+              - "Claude Code"
+              - "Cloudflare Pages"
+            links:
+              - label: "Ver web"
+                url: "https://kogara.app"
           - title: "Este portfolio"
             status: "live"
             statusLive: true
@@ -264,6 +284,7 @@ languages:
               - label: "Ver sitio"
                 url: "https://marcosmoreno-ai.github.io/"
           - title: "Arachne"
+            hidden: true  # abandonado; oculto pero se conserva el texto
             status: "in progress"
             content: "Un agente text-to-SQL sobre LangGraph: entra una pregunta en lenguaje natural, sale SQL verificado y ejecutado contra SQLite. El LLM es la parte pequeña; la ingeniería está en el control flow de alrededor — guard SELECT-only, repair loop acotado, evals de execution accuracy sobre el dev set de Spider y LangSmith para observabilidad. Fase temprana: el esqueleto del grafo compila; el loop completo está diseñado, no terminado. Prefiero enseñarlo honesto antes que brillante."
             badges:
@@ -574,6 +595,26 @@ params:
   projects:
     enable: true
     items:
+      - title: "Kogara"
+        status: "closed testing"
+        statusBeta: true
+        content: |-
+          An Android personal finance app that works offline: no accounts, no cloud and no internet permission. It splits each income into three pots (spending, savings and investment) and tracks transactions, recurring entries and a month-by-month analysis.
+
+          What needed the most care was making it reliable without a server: amounts in cents and BigDecimal so percentages add up exactly, date-effective history so changing a goal never rewrites closed months, and recurring entries that never duplicate even if the phone's clock changes.
+
+          I build it by directing Claude Code sessions: I decide product and design, approve each piece, test it on my phone and publish the releases. The method is part of the project too: a roadmap, a single working guide for agents and people alike, and code review before every merge.
+
+          About 31,000 lines of Kotlin and nearly 1,000 tests. Free for now, and in closed testing on Google Play.
+        badges:
+          - "Kotlin"
+          - "Jetpack Compose"
+          - "Room / SQLite"
+          - "Claude Code"
+          - "Cloudflare Pages"
+        links:
+          - label: "View site"
+            url: "https://kogara.app"
       - title: "This portfolio"
         status: "live"
         statusLive: true
@@ -590,6 +631,7 @@ params:
           - label: "View site"
             url: "https://marcosmoreno-ai.github.io/"
       - title: "Arachne"
+        hidden: true  # abandoned; hidden but text kept
         status: "in progress"
         content: "A text-to-SQL agent on LangGraph: plain-English question in, verified SQL out, executed against SQLite. The LLM is the small part; the engineering is the control flow around it — a SELECT-only guard, a bounded repair loop, execution-accuracy evals on the Spider dev set, LangSmith for observability. Early days: the graph skeleton compiles, the full loop is designed but not built. I'd rather show it honest than shiny."
         badges:
